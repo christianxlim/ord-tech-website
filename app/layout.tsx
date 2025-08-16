@@ -39,22 +39,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           {/* Fixed background video - Vimeo */}
-          <div className="fixed inset-0 -z-10">
-            {/* Direct Vimeo embed - using the exact working URL */}
+          <div className="fixed inset-0 -z-10 overflow-hidden">
+            {/* Direct Vimeo embed - oversized to ensure full coverage */}
             <iframe
-              src="https://player.vimeo.com/video/1110449400?autoplay=1&loop=1&muted=1&background=1"
+              src="https://player.vimeo.com/video/1110449400?autoplay=1&loop=1&muted=1&background=1&controls=0&title=0&byline=0&portrait=0"
               style={{ 
-                position: 'fixed',
+                position: 'absolute',
                 top: '50%',
                 left: '50%',
-                width: '100vw',
-                height: '100vh',
-                minWidth: '100vw',
-                minHeight: '100vh',
+                width: '150vw',
+                height: '150vh',
                 transform: 'translate(-50%, -50%)',
                 border: 'none',
-                zIndex: -1,
-                objectFit: 'cover',
+                pointerEvents: 'none',
               }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
@@ -62,7 +59,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               title="Background Video"
             />
             {/* Fallback background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style={{ zIndex: -2 }} />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style={{ zIndex: -1 }} />
             {/* Overlay for readability */}
             <div className="absolute inset-0 bg-black/30" style={{ zIndex: 1 }} />
           </div>
