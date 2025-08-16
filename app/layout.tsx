@@ -40,18 +40,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           {/* Fixed background video - Vimeo */}
           <div className="fixed inset-0 -z-10">
-            {/* Vimeo background video - simplified approach */}
+            {/* Direct Vimeo embed - using the exact working URL */}
             <iframe
-              src={`https://player.vimeo.com/video/${siteConfig.vimeoVideoId}?autoplay=1&loop=1&muted=1&background=1&controls=0&title=0&byline=0&portrait=0`}
+              src="https://player.vimeo.com/video/1110449400?autoplay=1&loop=1&muted=1&background=1"
               style={{ 
                 position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
+                top: '50%',
+                left: '50%',
+                width: '100vw',
+                height: '100vh',
+                minWidth: '100vw',
+                minHeight: '100vh',
+                transform: 'translate(-50%, -50%)',
                 border: 'none',
                 zIndex: -1,
+                objectFit: 'cover',
               }}
+              frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
               title="Background Video"
