@@ -33,4 +33,5 @@ yarn-error.log*
 .turbo
 
 .contentlayer
-.env
+.env*.DS_Store
+layout.css
