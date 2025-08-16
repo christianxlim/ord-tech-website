@@ -4,8 +4,8 @@ export const siteConfig = {
   name: "Ordnance Technologies",
   description:
     "Cutting-edge solutions, inspired by Anduril Industries.",
-  // Add your Vimeo video ID here (the numbers from your Vimeo URL)
-  vimeoVideoId: "YOUR_VIMEO_VIDEO_ID", // Replace with actual ID when ready
+  // Vimeo video ID from https://vimeo.com/manage/videos/1110449400
+  vimeoVideoId: "1110449400", // Background video for the website
   mainNav: [
     {
       title: "Home",
