@@ -40,30 +40,26 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           {/* Fixed background video - Vimeo */}
           <div className="fixed inset-0 -z-10">
-            {/* Vimeo background video */}
+            {/* Vimeo background video - simplified approach */}
             <iframe
-              src={`https://player.vimeo.com/video/${siteConfig.vimeoVideoId}?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&controls=0&title=0&byline=0&portrait=0`}
-              className="w-full h-full"
+              src={`https://player.vimeo.com/video/${siteConfig.vimeoVideoId}?autoplay=1&loop=1&muted=1&background=1&controls=0&title=0&byline=0&portrait=0`}
               style={{ 
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                width: '100vw',
-                height: '56.25vw', // 16:9 aspect ratio
-                minHeight: '100vh',
-                minWidth: '177.77vh', // 16:9 aspect ratio
-                transform: 'translate(-50%, -50%)',
-                objectFit: 'cover',
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                border: 'none',
+                zIndex: -1,
               }}
-              frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
               title="Background Video"
             />
-            {/* Fallback background for when video is loading/unavailable */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
-            {/* Overlay to maintain contrast */}
-            <div className="absolute inset-0 bg-black/20" />
+            {/* Fallback background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style={{ zIndex: -2 }} />
+            {/* Overlay for readability */}
+            <div className="absolute inset-0 bg-black/30" style={{ zIndex: 1 }} />
           </div>
           
           <div className="relative flex min-h-screen flex-col">
