@@ -187,7 +187,7 @@ export default function IndexPage() {
             Technical Innovation
           </h2>
           <p className="text-muted-foreground text-xl mb-12 leading-relaxed max-w-3xl mx-auto">
-            Our commitment to research and development ensures that our partners always have the technological edge. We are constantly pushing the boundaries of what's possible in autonomous systems.
+            Our commitment to research and development ensures that our partners always have the technological edge. We are constantly pushing the boundaries of what&apos;s possible in autonomous systems.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
