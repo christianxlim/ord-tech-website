@@ -42,8 +42,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="fixed inset-0 -z-10">
             {/* Vimeo background video */}
             <iframe
-              src={`https://player.vimeo.com/video/${siteConfig.vimeoVideoId}?autoplay=1&loop=1&muted=1&background=1`}
-              className="w-full h-full object-cover"
+              src={`https://player.vimeo.com/video/${siteConfig.vimeoVideoId}?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&controls=0&title=0&byline=0&portrait=0`}
+              className="w-full h-full"
               style={{ 
                 position: 'absolute',
                 top: '50%',
@@ -53,10 +53,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 minHeight: '100vh',
                 minWidth: '177.77vh', // 16:9 aspect ratio
                 transform: 'translate(-50%, -50%)',
+                objectFit: 'cover',
               }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
+              title="Background Video"
             />
             {/* Fallback background for when video is loading/unavailable */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
