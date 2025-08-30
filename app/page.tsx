@@ -1,220 +1,563 @@
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-import { Button, buttonVariants } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { BentoGrid, BentoCard } from "@/components/ui/bento-grid"
-import { CheckCircle, Shield, Zap, Target, Globe, Cpu } from "lucide-react"
+import { buttonVariants } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function IndexPage() {
   return (
-    <>
-      {/* Hero Section - Modernized */}
-      <section id="home" className="relative w-full min-h-[90vh] flex items-center justify-center text-center px-4 sm:px-6 lg:px-8">
-        <div className="z-10 max-w-6xl glass-effect rounded-3xl p-8 md:p-12">
-          <div className="animate-float">
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-8 bg-gradient-to-b from-foreground to-foreground/60 bg-clip-text text-transparent">
-              Pioneering the Future of
-              <br />
-              <span className="text-green-400 drop-shadow-lg">Autonomous Defense</span>
-            </h1>
-          </div>
-          
-          <p className="max-w-[800px] mx-auto text-lg sm:text-xl text-muted-foreground mb-12 leading-relaxed">
-            <span className="text-green-400 font-mono">[Advanced drone technology]</span> for unparalleled security and tactical advantage. 
-            We work with the federal government to supply next-generation unmanned solutions.
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+        <div className="flex max-w-[980px] flex-col items-center text-center gap-2 mx-auto">
+          <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
+            Ordnance Technologies LLC
+          </h1>
+          <p className="max-w-[700px] text-lg text-muted-foreground">
+            Currently deployed in active Haiti operations, delivering 100% reliable communications 
+            in challenging urban environments regardless of terrain obstacles or interference.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg glow-green">
-              Our Mission
-            </Button>
-            <Button variant="outline" size="lg" className="border-accent/30 text-accent hover:bg-accent/10 font-semibold px-8 py-4 text-lg">
-              Explore Tech
-            </Button>
-          </div>
         </div>
-        
-        {/* Floating elements for visual interest */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-green-500/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-green-400/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="#capabilities"
+            className={buttonVariants()}
+          >
+            View Capabilities
+          </Link>
+          <Link
+            href="#products"
+            className={buttonVariants({ variant: "outline" })}
+          >
+            View Products
+          </Link>
+        </div>
       </section>
 
-      {/* Partners Section - Modernized */}
-      <section id="partners" className="w-full py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 glass-effect rounded-3xl py-16">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Trusted by Defense Leaders
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
-            {["US Army", "US Navy", "US Air Force", "Special Operations", "Homeland Security"].map((partner, index) => (
-              <div key={partner} className="glass-effect rounded-lg p-6 hover:glow-green transition-all duration-300 group">
-                <span className="text-muted-foreground group-hover:text-accent font-semibold text-sm sm:text-base transition-colors">
-                  {partner}
+      {/* Core Capabilities Section */}
+      <section id="capabilities" className="container py-12 sm:py-16 border-t">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Core Capabilities</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Advanced autonomous systems delivering mission-critical reliability in contested environments
+          </p>
+        </div>
+
+        {/* Anti-Helicopter Systems */}
+        <div id="anti-helicopter" className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">Anti-Helicopter Systems</h3>
+          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl text-accent">Enhanced Vertical Launch Drone Platform</CardTitle>
+              <CardDescription>
+                Enlarged and reinforced airframe based on proven vertical launch drone architecture, 
+                specifically engineered for anti-helicopter operations with enhanced payload capacity and flight dynamics.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">Enhanced Payload</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">Anti-Helo Optimized</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl text-accent">Doppler Fuzing Technology</CardTitle>
+              <CardDescription>
+                Advanced Doppler-based proximity fuzing system that recreates the functionality of VT (Variable Time) fuzes, 
+                ensuring optimal detonation timing for maximum effectiveness against rotary-wing targets.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">Proximity Detection</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">VT Fuze Recreation</span>
+              </div>
+            </CardContent>
+          </Card>
+          </div>
+        </div>
+
+        {/* Advanced Communications & Deployment */}
+        <div id="communications" className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">Advanced Communications & Deployment</h3>
+          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl text-accent">RCWL Emplaced Devices</CardTitle>
+              <CardDescription>
+                Radar-based motion detection devices deployable via drone for persistent area monitoring. 
+                Enables remote surveillance and early warning capabilities in contested or inaccessible terrain.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">RCWL Sensors</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl text-accent">Fiber Optic Communications</CardTitle>
+              <CardDescription>
+                Universal fiber-optic drone systems fully compatible with both Betaflight and ArduPilot platforms. 
+                ArduPilot integration is preferred for advanced automation capabilities and seamless integration 
+                with USV mother ship operations, providing enhanced mission flexibility and control.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">Fiber Optic</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">ArduPilot Compatible</span>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Current Operational Deployment */}
+        <div className="mt-12">
+          <Card className="border-accent/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-accent">Current Operational Deployment</CardTitle>
+              <CardDescription>
+                Fiber drones are currently deployed in active Haiti operations, successfully operating under dense 
+                canopy cover surrounding gang-controlled territory to identify and map ratlines. These systems are 
+                also operational in Port-au-Prince, delivering 100% reliable communications in challenging urban 
+                environments regardless of terrain obstacles or interference.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">Canopy Penetration</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">100% Reliable Comms</span>
+              </div>
+            </CardContent>
+          </Card>
+          </div>
+        </div>
+
+        {/* AI Integration & Mother Ship Systems */}
+        <div id="ai-integration" className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">AI Integration & Mother Ship Systems</h3>
+          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl text-accent">Mother Shipped Drone Operations</CardTitle>
+              <CardDescription>
+                Magura-style USV platforms capable of deploying and recovering multiple drones for extended range operations. 
+                Enables persistent surveillance and engagement capabilities beyond traditional operational limits.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">USV Integration</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl">Pixel Lock Kamikaze Systems</CardTitle>
+              <CardDescription>
+                Advanced target acquisition systems utilizing precision pixel locking technology for autonomous engagement capabilities. 
+                Currently developing enhanced target identification systems for UXO detection and classification using exclusively 
+                3D rendered training datasets, ensuring enhanced safety and accuracy without live ordnance exposure.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">Pixel Lock</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">Autonomous Engagement</span>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Advanced Target Identification Development */}
+        <div className="mt-12">
+          <Card className="border-accent/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-accent">Advanced Target Identification Development</CardTitle>
+              <CardDescription>
+                Ongoing development of cutting-edge UXO identification and classification systems utilizing advanced 
+                computer vision trained exclusively on 3D rendered datasets, eliminating the need for live ordnance 
+                exposure during development and training phases.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">Neural Networks</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">UXO Identification</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded">3D Render Training</span>
+              </div>
+            </CardContent>
+          </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section id="products" className="container py-12 sm:py-16 border-t">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Products</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Combat-proven FPV drone systems engineered for mission-critical operations
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Apollyon AI FPV Card */}
+          <Card className="relative overflow-hidden group premium-card">
+            <div className="absolute top-4 right-4 z-10">
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-medium tactical-badge">
+                  Ukraine
+                </span>
+                <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-medium tactical-badge">
+                  Israel
+                </span>
+                <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-medium tactical-badge">
+                  Myanmar
                 </span>
               </div>
-            ))}
+            </div>
+            
+            {/* Skeleton Product Image */}
+            <div className="w-full h-48 bg-muted/20 rounded-t-lg flex items-center justify-center border-b border-border/20 skeleton-pulse">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-accent/20 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                  <span className="text-accent text-2xl font-bold">AI</span>
+                </div>
+                <span className="text-sm text-muted-foreground">Product Image</span>
+              </div>
+            </div>
+
+            <CardHeader>
+              <CardTitle className="text-2xl">Apollyon AI Driven FPV 7" & 10" SUAS</CardTitle>
+              <CardDescription className="text-base">
+                AI-driven autonomous capabilities with real-time object detection and tracking. 
+                Human-on-the-loop engagement model for ethical autonomous weapons operations.
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent className="space-y-4">
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="spec-item">
+                  <span className="text-muted-foreground">Range:</span>
+                  <span className="ml-2 font-medium">+15 km</span>
+                </div>
+                <div className="spec-item">
+                  <span className="text-muted-foreground">Endurance:</span>
+                  <span className="ml-2 font-medium">30 minutes</span>
+                </div>
+                <div className="spec-item">
+                  <span className="text-muted-foreground">Weight:</span>
+                  <span className="ml-2 font-medium">1.5 kg</span>
+                </div>
+                <div className="spec-item">
+                  <span className="text-muted-foreground">Payload:</span>
+                  <span className="ml-2 font-medium">3 kg</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">AI Autonomy</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">NDAA Compliant</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Blue UAS List</span>
+              </div>
+
+              <div className="pt-4 border-t border-border/20">
+                <Link
+                  href="/products/apollyon"
+                  className={buttonVariants({ className: "w-full premium-button" })}
+                >
+                  Contact for Pricing
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Abaddon FPV Card */}
+          <Card className="relative overflow-hidden group premium-card">
+            <div className="absolute top-4 right-4 z-10">
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-medium tactical-badge">
+                  Ukraine
+                </span>
+                <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-medium tactical-badge">
+                  Israel
+                </span>
+                <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-medium tactical-badge">
+                  Myanmar
+                </span>
+              </div>
+            </div>
+            
+            {/* Skeleton Product Image */}
+            <div className="w-full h-48 bg-muted/20 rounded-t-lg flex items-center justify-center border-b border-border/20 skeleton-pulse">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-accent/20 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                  <span className="text-accent text-2xl font-bold">FPV</span>
+                </div>
+                <span className="text-sm text-muted-foreground">Product Image</span>
+              </div>
+            </div>
+
+            <CardHeader>
+              <CardTitle className="text-2xl">Abaddon FPV 7" & 10" SUAS</CardTitle>
+              <CardDescription className="text-base">
+                Unparalleled adaptability and resilience. Front-line development approach with 
+                real-world combat experience integration from active conflict zones.
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent className="space-y-4">
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="spec-item">
+                  <span className="text-muted-foreground">Range:</span>
+                  <span className="ml-2 font-medium">+20 km</span>
+                </div>
+                <div className="spec-item">
+                  <span className="text-muted-foreground">Endurance:</span>
+                  <span className="ml-2 font-medium">25 minutes</span>
+                </div>
+                <div className="spec-item">
+                  <span className="text-muted-foreground">Weight:</span>
+                  <span className="ml-2 font-medium">1.5 kg</span>
+                </div>
+                <div className="spec-item">
+                  <span className="text-muted-foreground">Payload:</span>
+                  <span className="ml-2 font-medium">3 kg</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Combat Proven</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Front-line Tested</span>
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Adaptable</span>
+              </div>
+
+              <div className="pt-4 border-t border-border/20">
+                <Link
+                  href="/products/abaddon"
+                  className={buttonVariants({ className: "w-full premium-button" })}
+                >
+                  Contact for Pricing
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Training Programs Section */}
+      <section id="training-overview" className="container py-12 sm:py-16 border-t">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Training Programs</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Comprehensive FPV drone training from basic operations to advanced tactical missions
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Target Audiences */}
+          <Card>
+            <CardHeader className="text-center">
+              <CardTitle className="text-lg">Military Units</CardTitle>
+              <CardDescription>
+                Tactical operations and mission planning for military personnel
+              </CardDescription>
+            </CardHeader>
+          </Card>
+          
+          <Card>
+            <CardHeader className="text-center">
+              <CardTitle className="text-lg">Defense Contractors</CardTitle>
+              <CardDescription>
+                Technical integration and system optimization training
+              </CardDescription>
+            </CardHeader>
+          </Card>
+          
+          <Card>
+            <CardHeader className="text-center">
+              <CardTitle className="text-lg">Beginners</CardTitle>
+              <CardDescription>
+                Complete novices with no prior drone experience
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </div>
+
+        {/* Course Progression */}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold text-center mb-8">Course Progression</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-accent font-bold">1</span>
+                </div>
+                <CardTitle className="text-lg">Basic Training</CardTitle>
+                <CardDescription>8 hours • OT-FPV-1</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Intensive training for end users and beginners. Classroom instruction plus outdoor flight testing.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-accent font-bold">2</span>
+                </div>
+                <CardTitle className="text-lg">Advanced Training</CardTitle>
+                <CardDescription>3 days • OT-FPV-2</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Transform beginners into proficient operators ready for combat missions with simulated scenarios.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="w-12 h-12 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-accent font-bold">3</span>
+                </div>
+                <CardTitle className="text-lg">Expert Training</CardTitle>
+                <CardDescription>5 days • OT-FPV-3</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Advanced proficiency for complex combat missions including indoor navigation and low-light operations.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/training"
+              className={buttonVariants({ size: "lg" })}
+            >
+              View Complete Training Catalog
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Mission Section - Bento Layout */}
-      <section id="mission" className="w-full py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 glass-effect rounded-3xl py-16">
-          <h2 className="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-            Our Mission
-          </h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed">
-            Ordnance is dedicated to designing and developing advanced AI-powered autonomous systems for defense and security applications.
+      {/* Trust & Credibility Section */}
+      <section id="trust" className="container py-12 sm:py-16 border-t">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Platform Integration & Compatibility</h2>
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto px-4">
+            Proven integration with industry-standard platforms and ongoing operational deployments
           </p>
-
-          <BentoGrid className="max-w-7xl mx-auto">
-            <BentoCard size="lg" variant="glass">
-              <CardHeader>
-                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-accent" />
-                </div>
-                <CardTitle className="text-2xl">Advanced AI Core</CardTitle>
-                <CardDescription className="text-base">
-                  Our systems are powered by a proprietary AI engine that enables true autonomy in complex environments.
-                </CardDescription>
-              </CardHeader>
-            </BentoCard>
-
-            <BentoCard size="md" variant="elevated">
-              <CardHeader>
-                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-accent" />
-                </div>
-                <CardTitle>Rugged & Reliable</CardTitle>
-                <CardDescription>
-                  Built to MIL-SPEC standards for operation in the harshest environments.
-                </CardDescription>
-              </CardHeader>
-            </BentoCard>
-
-            <BentoCard size="md" variant="glow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-accent" />
-                </div>
-                <CardTitle>Mission-Adaptable</CardTitle>
-                <CardDescription>
-                  Modular platforms that can be configured for diverse operational needs.
-                </CardDescription>
-              </CardHeader>
-            </BentoCard>
-          </BentoGrid>
         </div>
-      </section>
-      
-      {/* Products Section - Enhanced Bento */}
-      <section id="products" className="w-full py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 glass-effect rounded-3xl py-16">
-          <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-foreground to-green-400 bg-clip-text text-transparent">
-            Autonomous Systems Portfolio
-          </h2>
-          
-          <BentoGrid className="max-w-7xl mx-auto">
-            <BentoCard size="lg" variant="glass">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
-                    <Globe className="w-6 h-6 text-green-400" />
-                  </div>
-                  <span className="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-medium">Operational</span>
-                </div>
-                <CardTitle className="text-3xl">Recon Drone</CardTitle>
-                <CardDescription className="text-lg">AI-Powered Aerial Surveillance</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  High-endurance UAV for long-range intelligence, surveillance, and reconnaissance missions with advanced AI target recognition.
-                </p>
-              </CardContent>
-            </BentoCard>
-
-            <BentoCard size="md" variant="elevated">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                    <Cpu className="w-6 h-6 text-blue-400" />
-                  </div>
-                  <span className="text-xs bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full font-medium">In Development</span>
-                </div>
-                <CardTitle>Tactical Ground Bot</CardTitle>
-                <CardDescription>Unmanned Ground Vehicle (UGV)</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Versatile UGV for route clearance, EOD, and remote threat assessment.
-                </p>
-              </CardContent>
-            </BentoCard>
-
-            <BentoCard size="md" variant="glow">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <span className="text-xs bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full font-medium">Field Testing</span>
-                </div>
-                <CardTitle>Maritime Patrol System</CardTitle>
-                <CardDescription>Autonomous Surface Vessel (ASV)</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  ASV for persistent maritime surveillance and port security.
-                </p>
-              </CardContent>
-            </BentoCard>
-          </BentoGrid>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+          <Card>
+            <CardHeader className="text-center pb-3">
+              <CardTitle className="text-base sm:text-lg">ArduPilot Integration</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center pt-0">
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Preferred platform for advanced automation capabilities and USV mother ship operations
+              </p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="text-center pb-3">
+              <CardTitle className="text-base sm:text-lg">Betaflight Compatible</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center pt-0">
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Universal fiber-optic drone systems with full platform compatibility
+              </p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="text-center pb-3">
+              <CardTitle className="text-base sm:text-lg">Active Deployments</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center pt-0">
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Currently operational in Haiti with proven performance in contested environments
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* CTA Section - Modern Design */}
-      <section id="contact" className="w-full py-24 text-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl glass-effect rounded-3xl py-16">
-          <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent">
-            Technical Innovation
-          </h2>
-          <p className="text-muted-foreground text-xl mb-12 leading-relaxed max-w-3xl mx-auto">
-            Our commitment to research and development ensures that our partners always have the technological edge. We are constantly pushing the boundaries of what&apos;s possible in autonomous systems.
+      {/* Mission Statement Section */}
+      <section id="mission" className="container py-12 sm:py-16 border-t">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Mission Statement</h2>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <Card>
+            <CardContent className="pt-6">
+              <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg leading-relaxed">
+                <p>
+                  At Ordnance Technologies, our mission is to be at the forefront of innovation and excellence in the 
+                  defense sector by providing cutting-edge solutions in drone technology, kinetic operations, and 
+                  asymmetric warfare. We are committed to advancing the capabilities and effectiveness of our military 
+                  partners through the development and implementation of state-of-the-art unmanned systems and 
+                  strategic operations that enhance tactical superiority and operational efficiency.
+                </p>
+                <p>
+                  Our team is dedicated to pioneering advancements that address the evolving challenges of modern 
+                  warfare, ensuring the safety and success of our clients in complex and dynamic environments. With 
+                  integrity, precision, and an unwavering commitment to excellence, we aim to empower defense forces 
+                  globally to achieve their strategic objectives and maintain peace and security.
+                </p>
+                <div className="mt-6 sm:mt-8 pt-4 text-center">
+                  <p className="text-lg sm:text-xl font-semibold text-accent">
+                    "Bringing thoughts to Action"
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="container py-12 sm:py-16 border-t">
+        <div className="text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Partnership Brief</h2>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            For detailed technical specifications, deployment case studies, and partnership opportunities.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-10 py-6 text-lg glow-green">
-              Get in Touch
-            </Button>
-            <Button variant="outline" size="lg" className="border-accent/30 text-accent hover:bg-accent/10 font-bold px-10 py-6 text-lg">
-              View Capabilities
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="mailto:contact@ordnancetechnologies.com"
+              className={buttonVariants()}
+            >
+              Request Technical Brief
+            </Link>
+            <Link
+              href="#capabilities"
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Review Capabilities
+            </Link>
           </div>
         </div>
       </section>
-      
-      {/* Final CTA - Enhanced */}
-      <section className="w-full py-16 text-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 glass-effect rounded-3xl py-12 border-t border-green-500/20">
-          <h2 className="text-4xl font-bold mb-6 text-green-400">
-            Ready to Enhance Your Defense Capabilities?
-          </h2>
-          <p className="mb-8 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Contact us to learn more about our technology and how it can be integrated into your operations.
-          </p>
-          <Button size="lg" variant="outline" className="border-green-400/30 text-green-400 hover:bg-green-400/10 font-semibold px-8 py-4">
-            Schedule Consultation
-          </Button>
-        </div>
-      </section>
-    </>
+    </div>
   )
 }

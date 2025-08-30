@@ -35,3 +35,13 @@ yarn-error.log*
 .contentlayer
 .env*.DS_Store
 layout.css
+
+# Style guides and reference documents
+style-guide.pdf
+*.styleguide.pdf
+reference-docs/
+style-guides/
+
+# Analysis and PDF insights
+analysis/
+*.analysis.json

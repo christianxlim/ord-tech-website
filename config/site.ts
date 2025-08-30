@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "Ordnance Technologies",
   description:
-    "Cutting-edge solutions, inspired by Anduril Industries.",
+    "Advanced autonomous systems delivering mission-critical reliability for defense operations.",
   // Vimeo video ID from https://vimeo.com/manage/videos/1110449400
   vimeoVideoId: "1110449400", // Background video for the website
   mainNav: [
@@ -12,24 +12,32 @@ export const siteConfig = {
       href: "/",
     },
     {
+      title: "Capabilities",
+      href: "#capabilities",
+    },
+    {
+      title: "Products",
+      href: "#products",
+      items: [
+        {
+          title: "Apollyon AI FPV",
+          href: "/products/apollyon",
+          description: "AI-driven autonomous FPV drone system"
+        },
+        {
+          title: "Abaddon FPV",
+          href: "/products/abaddon", 
+          description: "Combat-proven FPV drone platform"
+        }
+      ]
+    },
+    {
+      title: "Training",
+      href: "/training",
+    },
+    {
       title: "Mission",
       href: "#mission",
-    },
-    {
-      title: "Trust",
-      href: "#trust",
-    },
-    {
-      title: "Technology",
-      href: "#technology",
-    },
-    {
-      title: "Advantages",
-      href: "#advantages",
-    },
-    {
-      title: "Innovation",
-      href: "#innovation",
     },
     {
       title: "Contact",

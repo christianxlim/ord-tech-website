@@ -52,6 +52,13 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Style guide brand colors
+        brand: {
+          blue: "#1E2A44", // Primary brand blue
+          brown: "#333333", // Background brown
+          grey: "#515151", // Secondary grey
+          link: "#149DCC", // Link blue
+        },
       },
       borderRadius: {
         lg: `var(--radius)`,

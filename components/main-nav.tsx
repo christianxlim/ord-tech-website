@@ -19,10 +19,10 @@ export function MainNav({ items }: MainNavProps) {
     <div className="flex items-center justify-between w-full">
       {/* Logo */}
       <Link href="/" className="flex items-center space-x-3 group">
-        <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+        <div className="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <Icons.logo className="h-5 w-5 text-white" />
         </div>
-        <span className="inline-block font-bold text-lg bg-gradient-to-r from-foreground to-green-400 bg-clip-text text-transparent">
+        <span className="inline-block font-bold text-lg bg-gradient-to-r from-foreground to-accent bg-clip-text text-transparent">
           {siteConfig.name}
         </span>
       </Link>
@@ -30,11 +30,45 @@ export function MainNav({ items }: MainNavProps) {
       {/* Desktop Navigation */}
       {items?.length ? (
         <nav className="hidden md:flex gap-1">
-          {items?.map(
-            (item, index) =>
-              item.href && (
+          {items?.map((item, index) => (
+            <div key={index} className="relative group">
+              {item.items ? (
+                // Dropdown menu item
+                <>
+                  <button
+                    className={cn(
+                      "relative flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-accent transition-all duration-300 rounded-lg hover:bg-accent/10 group",
+                      item.disabled && "cursor-not-allowed opacity-80"
+                    )}
+                  >
+                    {item.title}
+                    <Icons.chevronDown className="ml-1 h-3 w-3 transition-transform group-hover:rotate-180" />
+                    <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </button>
+                  
+                  {/* Dropdown Menu */}
+                  <div className="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="glass-effect rounded-lg border border-border/40 backdrop-blur-xl p-2">
+                      {item.items.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={subItem.href || "#"}
+                          className="block px-3 py-2 text-sm text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-md transition-colors duration-200"
+                        >
+                          <div className="font-medium">{subItem.title}</div>
+                          {subItem.description && (
+                            <div className="text-xs text-muted-foreground/70 mt-1">
+                              {subItem.description}
+                            </div>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ) : item.href ? (
+                // Regular menu item
                 <Link
-                  key={index}
                   href={item.href}
                   className={cn(
                     "relative flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-accent transition-all duration-300 rounded-lg hover:bg-accent/10 group",
@@ -44,8 +78,9 @@ export function MainNav({ items }: MainNavProps) {
                   {item.title}
                   <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Link>
-              )
-          )}
+              ) : null}
+            </div>
+          ))}
         </nav>
       ) : null}
 
@@ -75,11 +110,35 @@ export function MainNav({ items }: MainNavProps) {
       {isOpen && items?.length && (
         <div className="md:hidden absolute top-16 left-0 right-0 z-50 glass-effect border-b border-border/40 backdrop-blur-xl">
           <nav className="container py-6 flex flex-col space-y-2">
-            {items.map(
-              (item, index) =>
-                item.href && (
+            {items.map((item, index) => (
+              <div key={index}>
+                {item.items ? (
+                  // Mobile dropdown section
+                  <div className="space-y-1">
+                    <div className="px-4 py-2 text-sm font-medium text-accent">
+                      {item.title}
+                    </div>
+                    {item.items.map((subItem, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        href={subItem.href || "#"}
+                        className="flex items-center px-6 py-2 text-sm text-muted-foreground hover:text-accent hover:bg-accent/10 transition-all duration-300 rounded-lg ml-2"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <div>
+                          <div className="font-medium">{subItem.title}</div>
+                          {subItem.description && (
+                            <div className="text-xs text-muted-foreground/70">
+                              {subItem.description}
+                            </div>
+                          )}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : item.href ? (
+                  // Regular mobile menu item
                   <Link
-                    key={index}
                     href={item.href}
                     className={cn(
                       "flex items-center px-4 py-3 text-sm font-medium text-muted-foreground hover:text-accent hover:bg-accent/10 transition-all duration-300 rounded-lg",
@@ -89,8 +148,9 @@ export function MainNav({ items }: MainNavProps) {
                   >
                     {item.title}
                   </Link>
-                )
-            )}
+                ) : null}
+              </div>
+            ))}
           </nav>
         </div>
       )}
