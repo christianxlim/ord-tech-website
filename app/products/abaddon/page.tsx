@@ -64,7 +64,7 @@ export default function AbaddonPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">Forged in Combat</h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Evolved through Ukraine's intense warfare conditions with warfighter collaboration. 
+            Evolved through Ukraine&apos;s intense warfare conditions with warfighter collaboration. 
             Front-line, iterative development approach prioritizing real-world combat experience 
             and warfighter feedback.
           </p>

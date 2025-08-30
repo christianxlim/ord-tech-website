@@ -405,7 +405,7 @@ export default function ApollyonPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Forged and refined in Ukraine's war zone conditions, ensuring real-world 
+                  Forged and refined in Ukraine&apos;s war zone conditions, ensuring real-world 
                   battlefield effectiveness and operational reliability.
                 </p>
               </CardContent>
