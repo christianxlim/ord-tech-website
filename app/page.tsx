@@ -243,7 +243,7 @@ export default function IndexPage() {
             </div>
 
             <CardHeader>
-              <CardTitle className="text-2xl">Apollyon AI Driven FPV 7" & 10" SUAS</CardTitle>
+              <CardTitle className="text-2xl">Apollyon AI Driven FPV 7&quot; &amp; 10&quot; SUAS</CardTitle>
               <CardDescription className="text-base">
                 AI-driven autonomous capabilities with real-time object detection and tracking. 
                 Human-on-the-loop engagement model for ethical autonomous weapons operations.
@@ -314,7 +314,7 @@ export default function IndexPage() {
             </div>
 
             <CardHeader>
-              <CardTitle className="text-2xl">Abaddon FPV 7" & 10" SUAS</CardTitle>
+              <CardTitle className="text-2xl">Abaddon FPV 7&quot; &amp; 10&quot; SUAS</CardTitle>
               <CardDescription className="text-base">
                 Unparalleled adaptability and resilience. Front-line development approach with 
                 real-world combat experience integration from active conflict zones.
@@ -526,7 +526,7 @@ export default function IndexPage() {
                 </p>
                 <div className="mt-6 sm:mt-8 pt-4 text-center">
                   <p className="text-lg sm:text-xl font-semibold text-accent">
-                    "Bringing thoughts to Action"
+                    &quot;Bringing thoughts to Action&quot;
                   </p>
                 </div>
               </div>

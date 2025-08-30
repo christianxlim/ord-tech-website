@@ -24,7 +24,7 @@ export default function ApollyonPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            Apollyon AI Driven FPV 7" & 10" SUAS
+            Apollyon AI Driven FPV 7&quot; &amp; 10&quot; SUAS
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -164,7 +164,7 @@ export default function ApollyonPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Variants:</span>
-                  <span className="font-medium">7" & 10"</span>
+                  <span className="font-medium">7&quot; &amp; 10&quot;</span>
                 </div>
               </CardContent>
             </Card>
