@@ -45,3 +45,7 @@ style-guides/
 # Analysis and PDF insights
 analysis/
 *.analysis.json
+
+# PDF documents
+*.pdf
+OrdTechnologies.pdf
