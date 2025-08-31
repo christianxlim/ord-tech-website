@@ -441,7 +441,7 @@ export default function AbaddonPage() {
           <div className="text-center mt-12">
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-6 border border-primary/20">
               <h3 className="text-xl font-bold mb-3">Ready for Front-line Deployment?</h3>
-              <p className="text-muted-foreground mb-4">Discuss Abaddon's adaptability for your operational environment</p>
+              <p className="text-muted-foreground mb-4">Discuss Abaddon&apos;s adaptability for your operational environment</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button className="premium-button bg-primary hover:bg-primary/90">
                   Contact Operations Team
