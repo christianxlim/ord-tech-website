@@ -29,7 +29,7 @@ const FuzzyText = React.forwardRef<
   className,
 }, ref) => {
   const innerRef = useRef<HTMLCanvasElement & { cleanupFuzzyText?: () => void }>(null)
-  const canvasRef = (ref as React.RefObject<HTMLCanvasElement>) || innerRef
+  const canvasRef = (ref as React.RefObject<HTMLCanvasElement & { cleanupFuzzyText?: () => void }>) || innerRef
   const { resolvedTheme } = useTheme()
   const textColorRef = useRef<string>("")
   
