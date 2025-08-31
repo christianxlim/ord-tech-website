@@ -60,8 +60,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
               title="Background Video"
-              loading="eager"
-              preload="metadata"
             />
             {/* Fallback background - changed to black */}
             <div className="absolute inset-0 bg-black" style={{ zIndex: -1 }} />
