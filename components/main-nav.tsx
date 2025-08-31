@@ -18,13 +18,12 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex items-center justify-between w-full">
       {/* Logo */}
-      <Link href="/" className="flex items-center space-x-3 group">
-        <div className="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <Icons.logo className="h-5 w-5 text-white" />
-        </div>
-        <span className="inline-block font-bold text-lg bg-gradient-to-r from-foreground to-accent bg-clip-text text-transparent">
-          {siteConfig.name}
-        </span>
+      <Link href="/" className="flex items-center">
+        <img 
+          src="/logo-clean.png" 
+          alt="Ordnance Technologies" 
+          className="h-8 w-auto"
+        />
       </Link>
 
       {/* Desktop Navigation */}

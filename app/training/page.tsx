@@ -32,7 +32,7 @@ export default function TrainingPage() {
       </section>
 
       {/* Training Methodology */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">Training Methodology</h2>
           <p className="text-lg text-muted-foreground mb-12">
@@ -77,7 +77,7 @@ export default function TrainingPage() {
       </section>
 
       {/* Target Audiences */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Target Audiences</h2>
           
@@ -158,10 +158,26 @@ export default function TrainingPage() {
             </Card>
           </div>
         </div>
+        
+        {/* Mid-page CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-8 border border-accent/20">
+            <h3 className="text-2xl font-bold mb-4 text-accent">Ready to Start Training?</h3>
+            <p className="text-muted-foreground mb-6">Discuss your training needs and course selection with our experts</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="premium-button text-lg px-8 bg-accent hover:bg-accent/90">
+                Schedule Consultation
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 border-accent text-accent hover:bg-accent/10">
+                Download Course Catalog
+              </Button>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Course Progression Pathway */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Course Progression Pathway</h2>
           
@@ -249,7 +265,7 @@ export default function TrainingPage() {
       </section>
 
       {/* Detailed Course Catalog */}
-      <section id="courses" className="container py-12 sm:py-16 border-t">
+      <section id="courses" className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Complete Course Catalog</h2>
           
@@ -632,10 +648,26 @@ export default function TrainingPage() {
             </Card>
           </div>
         </div>
+        
+        {/* Mid-page CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-6 border border-primary/20">
+            <h3 className="text-xl font-bold mb-3">Custom Training Program?</h3>
+            <p className="text-muted-foreground mb-4">We can tailor courses to your specific operational requirements</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button className="premium-button bg-primary hover:bg-primary/90">
+                Discuss Custom Training
+              </Button>
+              <Button variant="outline" className="border-accent text-accent hover:bg-accent/10">
+                View Standard Courses
+              </Button>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Key Differentiators */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Training Differentiators</h2>
           
@@ -691,26 +723,52 @@ export default function TrainingPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="container py-12 sm:py-16 border-t">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Begin Training?</h2>
-          <p className="text-muted-foreground mb-8">
-            Contact our training team to discuss course selection, scheduling, and 
-            customized training programs for your operational requirements.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8">
-              Contact Training Team
-            </Button>
-            <Link
-              href="/#products"
-              className={buttonVariants({ variant: "outline", size: "lg", className: "text-lg px-8" })}
-            >
-              View Products
-            </Link>
+      {/* Enhanced CTA Section */}
+      <section className="container py-16 sm:py-24 border-t border-white/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-br from-accent/20 via-primary/10 to-accent/20 rounded-2xl p-12 border border-accent/30 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/5 to-transparent"></div>
+            
+            <div className="relative z-10">
+              <h2 className="text-4xl font-bold mb-6 text-accent">Ready to Begin Training?</h2>
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                Contact our training team to discuss course selection, scheduling, and 
+                customized training programs for your operational requirements. Transform your team today.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+                <Button size="lg" className="premium-button text-xl px-12 py-4 bg-accent hover:bg-accent/90 shadow-lg">
+                  Contact Training Team
+                </Button>
+                <Link
+                  href="/#products"
+                  className={buttonVariants({ variant: "outline", size: "lg", className: "text-xl px-12 py-4 border-accent text-accent hover:bg-accent/10 shadow-lg" })}
+                >
+                  View Products
+                </Link>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Hands-on Training</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Real-world Scenarios</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Complete Beginners Welcome</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        
+        {/* Bottom spacing */}
+        <div className="pb-16"></div>
       </section>
     </div>
   )

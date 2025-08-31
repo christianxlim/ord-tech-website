@@ -10,11 +10,11 @@ export default function IndexPage() {
       {/* Hero Section */}
       <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
         <div className="flex max-w-[980px] flex-col items-center text-center gap-2 mx-auto">
-          <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
+          <h1 className="text-3xl font-black leading-tight tracking-tight sm:text-3xl md:text-5xl lg:text-6xl font-display">
             Ordnance Technologies LLC
-          </h1>
+            </h1>
           <p className="max-w-[700px] text-lg text-muted-foreground">
-            Currently deployed in active Haiti operations, delivering 100% reliable communications 
+            Currently deployed in active Ukraine and Burma operations, delivering 100% reliable communications 
             in challenging urban environments regardless of terrain obstacles or interference.
           </p>
         </div>
@@ -31,11 +31,11 @@ export default function IndexPage() {
           >
             View Products
           </Link>
-        </div>
+          </div>
       </section>
 
       {/* Core Capabilities Section */}
-      <section id="capabilities" className="container py-12 sm:py-16 border-t">
+      <section id="capabilities" className="container py-12 sm:py-16 border-t border-white/20">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Core Capabilities</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -143,7 +143,7 @@ export default function IndexPage() {
           </Card>
           </div>
         </div>
-
+        
         {/* AI Integration & Mother Ship Systems */}
         <div id="ai-integration" className="mb-16">
           <div className="text-center mb-8">
@@ -204,10 +204,32 @@ export default function IndexPage() {
           </Card>
           </div>
         </div>
+        
+        {/* Mid-page CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-8 border border-accent/20">
+            <h3 className="text-2xl font-bold mb-4 text-accent">Ready to Deploy Advanced Systems?</h3>
+            <p className="text-muted-foreground mb-6">Contact our team to discuss your operational requirements and deployment planning</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="#products"
+                className={buttonVariants({ size: "lg", className: "premium-button text-lg px-8 bg-accent hover:bg-accent/90" })}
+              >
+                View Products
+              </Link>
+              <Link
+                href="#contact"
+                className={buttonVariants({ variant: "outline", size: "lg", className: "text-lg px-8 border-accent text-accent hover:bg-accent/10" })}
+              >
+                Request Brief
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Products Section */}
-      <section id="products" className="container py-12 sm:py-16 border-t">
+      <section id="products" className="container py-12 sm:py-16 border-t border-white/20">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Products</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -233,7 +255,7 @@ export default function IndexPage() {
             </div>
             
             {/* Skeleton Product Image */}
-            <div className="w-full h-48 bg-muted/20 rounded-t-lg flex items-center justify-center border-b border-border/20 skeleton-pulse">
+            <div className="w-full h-48 bg-muted/20 rounded-t-lg flex items-center justify-center border-b border-white/20 skeleton-pulse">
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent/20 rounded-lg mx-auto mb-2 flex items-center justify-center">
                   <span className="text-accent text-2xl font-bold">AI</span>
@@ -244,11 +266,11 @@ export default function IndexPage() {
 
             <CardHeader>
               <CardTitle className="text-2xl">Apollyon AI Driven FPV 7&quot; &amp; 10&quot; SUAS</CardTitle>
-              <CardDescription className="text-base">
+                <CardDescription className="text-base">
                 AI-driven autonomous capabilities with real-time object detection and tracking. 
                 Human-on-the-loop engagement model for ethical autonomous weapons operations.
-              </CardDescription>
-            </CardHeader>
+                </CardDescription>
+              </CardHeader>
 
             <CardContent className="space-y-4">
               <div className="grid grid-cols-2 gap-4 text-sm">
@@ -276,7 +298,7 @@ export default function IndexPage() {
                 <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Blue UAS List</span>
               </div>
 
-              <div className="pt-4 border-t border-border/20">
+              <div className="pt-4 border-t border-white/20 border-white/20">
                 <Link
                   href="/products/apollyon"
                   className={buttonVariants({ className: "w-full premium-button" })}
@@ -304,7 +326,7 @@ export default function IndexPage() {
             </div>
             
             {/* Skeleton Product Image */}
-            <div className="w-full h-48 bg-muted/20 rounded-t-lg flex items-center justify-center border-b border-border/20 skeleton-pulse">
+            <div className="w-full h-48 bg-muted/20 rounded-t-lg flex items-center justify-center border-b border-white/20 skeleton-pulse">
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent/20 rounded-lg mx-auto mb-2 flex items-center justify-center">
                   <span className="text-accent text-2xl font-bold">FPV</span>
@@ -318,8 +340,8 @@ export default function IndexPage() {
               <CardDescription className="text-base">
                 Unparalleled adaptability and resilience. Front-line development approach with 
                 real-world combat experience integration from active conflict zones.
-              </CardDescription>
-            </CardHeader>
+                </CardDescription>
+              </CardHeader>
 
             <CardContent className="space-y-4">
               <div className="grid grid-cols-2 gap-4 text-sm">
@@ -347,7 +369,7 @@ export default function IndexPage() {
                 <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Adaptable</span>
               </div>
 
-              <div className="pt-4 border-t border-border/20">
+              <div className="pt-4 border-t border-white/20 border-white/20">
                 <Link
                   href="/products/abaddon"
                   className={buttonVariants({ className: "w-full premium-button" })}
@@ -358,10 +380,32 @@ export default function IndexPage() {
             </CardContent>
           </Card>
         </div>
+        
+        {/* Mid-page CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-6 border border-primary/20">
+            <h3 className="text-xl font-bold mb-3">Need Custom Specifications?</h3>
+            <p className="text-muted-foreground mb-4">Discuss mission-specific requirements and custom configurations</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href="/products/apollyon"
+                className={buttonVariants({ className: "premium-button bg-primary hover:bg-primary/90" })}
+              >
+                Apollyon Details
+              </Link>
+              <Link
+                href="/products/abaddon"
+                className={buttonVariants({ variant: "outline", className: "border-accent text-accent hover:bg-accent/10" })}
+              >
+                Abaddon Details
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
-
+      
       {/* Training Programs Section */}
-      <section id="training-overview" className="container py-12 sm:py-16 border-t">
+      <section id="training-overview" className="container py-12 sm:py-16 border-t border-white/20">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Training Programs</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -458,10 +502,32 @@ export default function IndexPage() {
             </Link>
           </div>
         </div>
+        
+        {/* Mid-page CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-6 border border-accent/20">
+            <h3 className="text-xl font-bold mb-3 text-accent">Start Training Your Team?</h3>
+            <p className="text-muted-foreground mb-4">From complete beginners to advanced tactical operations</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href="/training"
+                className={buttonVariants({ className: "premium-button bg-accent hover:bg-accent/90" })}
+              >
+                View Training Courses
+              </Link>
+              <Link
+                href="#contact"
+                className={buttonVariants({ className: "bg-primary text-white hover:bg-primary/90 shadow-lg" })}
+              >
+                Schedule Consultation
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Trust & Credibility Section */}
-      <section id="trust" className="container py-12 sm:py-16 border-t">
+      <section id="trust" className="container py-12 sm:py-16 border-t border-white/20">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Platform Integration & Compatibility</h2>
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto px-4">
@@ -503,7 +569,7 @@ export default function IndexPage() {
       </section>
 
       {/* Mission Statement Section */}
-      <section id="mission" className="container py-12 sm:py-16 border-t">
+      <section id="mission" className="container py-12 sm:py-16 border-t border-white/20">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Mission Statement</h2>
         </div>
@@ -529,34 +595,61 @@ export default function IndexPage() {
                     &quot;Bringing thoughts to Action&quot;
                   </p>
                 </div>
-              </div>
+          </div>
             </CardContent>
           </Card>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="container py-12 sm:py-16 border-t">
-        <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Partnership Brief</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            For detailed technical specifications, deployment case studies, and partnership opportunities.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="mailto:contact@ordnancetechnologies.com"
-              className={buttonVariants()}
-            >
-              Request Technical Brief
-            </Link>
-            <Link
-              href="#capabilities"
-              className={buttonVariants({ variant: "outline" })}
-            >
-              Review Capabilities
-            </Link>
+      
+      {/* Enhanced Contact Section */}
+      <section id="contact" className="container py-16 sm:py-24 border-t border-white/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-br from-accent/20 via-primary/10 to-accent/20 rounded-2xl p-12 border border-accent/30 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/5 to-transparent"></div>
+            
+            <div className="relative z-10">
+              <h2 className="text-4xl font-bold mb-6 text-accent">Partnership Brief</h2>
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                For detailed technical specifications, deployment case studies, and partnership opportunities. 
+                Connect with our team to discuss mission-critical requirements.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+                <Link
+                  href="mailto:contact@ordnancetechnologies.com"
+                  className={buttonVariants({ size: "lg", className: "premium-button text-xl px-12 py-4 bg-accent hover:bg-accent/90 shadow-lg" })}
+                >
+                  Request Technical Brief
+                </Link>
+                <Link
+                  href="#capabilities"
+                  className={buttonVariants({ variant: "outline", size: "lg", className: "text-xl px-12 py-4 border-accent text-accent hover:bg-accent/10 shadow-lg" })}
+                >
+                  Review Capabilities
+                </Link>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Combat-Proven Systems</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Active Deployments</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Comprehensive Training</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        
+        {/* Bottom spacing */}
+        <div className="pb-16"></div>
       </section>
     </div>
   )

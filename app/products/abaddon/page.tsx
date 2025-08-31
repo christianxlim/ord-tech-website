@@ -36,7 +36,7 @@ export default function AbaddonPage() {
           </p>
 
           {/* Skeleton Product Image */}
-          <div className="w-full h-80 bg-muted/20 rounded-lg flex items-center justify-center border border-border/20 mb-8">
+          <div className="w-full h-80 bg-muted/20 rounded-lg flex items-center justify-center border border-white/20 mb-8">
             <div className="text-center">
               <div className="w-24 h-24 bg-accent/20 rounded-lg mx-auto mb-4 flex items-center justify-center">
                 <span className="text-accent text-4xl font-bold">FPV</span>
@@ -60,7 +60,7 @@ export default function AbaddonPage() {
       </section>
 
       {/* Combat Heritage */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">Forged in Combat</h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -107,7 +107,7 @@ export default function AbaddonPage() {
       </section>
 
       {/* Key Features */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
           
@@ -182,7 +182,7 @@ export default function AbaddonPage() {
       </section>
 
       {/* Technical Specifications */}
-      <section id="specifications" className="container py-12 sm:py-16 border-t">
+      <section id="specifications" className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Technical Specifications</h2>
           
@@ -253,11 +253,22 @@ export default function AbaddonPage() {
               </CardContent>
             </Card>
           </div>
+          
+          {/* Mid-page CTA */}
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-8 border border-accent/20">
+              <h3 className="text-2xl font-bold mb-4 text-accent">Need Abaddon Technical Details?</h3>
+              <p className="text-muted-foreground mb-6">Get comprehensive specifications and battlefield performance data</p>
+              <Button size="lg" className="premium-button text-lg px-8 bg-accent hover:bg-accent/90">
+                Request Documentation
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Mission Capabilities */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Mission Capabilities</h2>
           
@@ -307,7 +318,7 @@ export default function AbaddonPage() {
       </section>
 
       {/* Competitive Advantages */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Unique Advantages</h2>
           
@@ -364,7 +375,7 @@ export default function AbaddonPage() {
       </section>
 
       {/* Vs Apollyon Comparison */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Abaddon vs Apollyon</h2>
           
@@ -425,11 +436,27 @@ export default function AbaddonPage() {
               </CardContent>
             </Card>
           </div>
+          
+          {/* Mid-page CTA */}
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-6 border border-primary/20">
+              <h3 className="text-xl font-bold mb-3">Ready for Front-line Deployment?</h3>
+              <p className="text-muted-foreground mb-4">Discuss Abaddon's adaptability for your operational environment</p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button className="premium-button bg-primary hover:bg-primary/90">
+                  Contact Operations Team
+                </Button>
+                <Button variant="outline" className="border-accent text-accent hover:bg-accent/10">
+                  Compare Products
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Pricing & Flexibility */}
-      <section className="container py-12 sm:py-16 border-t">
+      <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">Flexible Pricing for Every Mission</h2>
           <p className="text-lg text-muted-foreground mb-8">
@@ -477,26 +504,52 @@ export default function AbaddonPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="container py-12 sm:py-16 border-t">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Deploy Abaddon?</h2>
-          <p className="text-muted-foreground mb-8">
-            Contact our team for detailed specifications, pricing, and deployment planning 
-            tailored to your operational requirements.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8">
-              Contact for Pricing
-            </Button>
-            <Link
-              href="/products/apollyon"
-              className={buttonVariants({ variant: "outline", size: "lg", className: "text-lg px-8" })}
-            >
-              Compare with Apollyon
-            </Link>
+      {/* Enhanced CTA Section */}
+      <section className="container py-16 sm:py-24 border-t border-white/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-br from-accent/20 via-primary/10 to-accent/20 rounded-2xl p-12 border border-accent/30 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/5 to-transparent"></div>
+            
+            <div className="relative z-10">
+              <h2 className="text-4xl font-bold mb-6 text-accent">Ready to Deploy Abaddon?</h2>
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                Contact our team for detailed specifications, pricing, and deployment planning 
+                tailored to your operational requirements. Battle-tested reliability awaits.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+                <Button size="lg" className="premium-button text-xl px-12 py-4 bg-accent hover:bg-accent/90 shadow-lg">
+                  Contact for Pricing
+                </Button>
+                <Link
+                  href="/products/apollyon"
+                  className={buttonVariants({ variant: "outline", size: "lg", className: "text-xl px-12 py-4 border-accent text-accent hover:bg-accent/10 shadow-lg" })}
+                >
+                  Compare with Apollyon
+                </Link>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Front-line Proven</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>+20km Range</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Contested Environment Ready</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        
+        {/* Bottom spacing */}
+        <div className="pb-16"></div>
       </section>
     </div>
   )
