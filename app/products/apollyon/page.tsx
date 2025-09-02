@@ -10,13 +10,7 @@ export default function ApollyonPage() {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-wrap gap-2 mb-6">
             <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
-              Ukraine
-            </span>
-            <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
-              Israel
-            </span>
-            <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
-              Myanmar
+              Deployed in Various Areas
             </span>
             <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
               Approved for Operational Use
@@ -346,7 +340,7 @@ export default function ApollyonPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-sm">Blue UAS list components</span>
+                    <span className="text-sm">Combat-proven systems</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -432,8 +426,8 @@ export default function ApollyonPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Forged and refined in Ukraine&apos;s war zone conditions, ensuring real-world 
-                  battlefield effectiveness and operational reliability.
+                                  Forged and refined in active conflict zone conditions, ensuring real-world 
+                battlefield effectiveness and operational reliability.
                 </p>
               </CardContent>
             </Card>

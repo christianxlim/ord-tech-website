@@ -10,13 +10,7 @@ export default function AbaddonPage() {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-wrap gap-2 mb-6">
             <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
-              Ukraine
-            </span>
-            <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
-              Israel
-            </span>
-            <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
-              Myanmar
+              Deployed in Various Areas
             </span>
             <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
               Officially Approved for Operational Use
@@ -64,7 +58,7 @@ export default function AbaddonPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">Forged in Combat</h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Evolved through Ukraine&apos;s intense warfare conditions with warfighter collaboration. 
+            Evolved through intense conflict zone conditions with warfighter collaboration. 
             Front-line, iterative development approach prioritizing real-world combat experience 
             and warfighter feedback.
           </p>

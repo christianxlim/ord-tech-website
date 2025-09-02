@@ -243,8 +243,8 @@ export default function TrainingPage() {
                   <div className="w-16 h-16 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-accent font-bold text-xl">3</span>
                   </div>
-                  <CardTitle className="text-xl">Expert Training</CardTitle>
-                  <CardDescription>5 days • OT-FPV-3</CardDescription>
+                                  <CardTitle className="text-xl">Expert Training</CardTitle>
+                <CardDescription>8 days • OT-FPV-3</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
@@ -573,7 +573,7 @@ export default function TrainingPage() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
                     <CardTitle className="text-2xl text-accent">OT-FPV-3: Ord Tech Basic to Advanced FPV Mission Course</CardTitle>
-                    <CardDescription className="text-lg">5 days • Complete transformation program</CardDescription>
+                    <CardDescription className="text-lg">8 days • Complete transformation program</CardDescription>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm">Novice Operators</span>
@@ -583,8 +583,8 @@ export default function TrainingPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-6">
-                  Transform novice FPV drone operators into proficient tacticians capable of executing 
-                  complex combat missions in diverse, high-stakes environments.
+                            Transform novice FPV drone operators into proficient tacticians capable of executing 
+          complex combat missions in diverse, high-stakes environments over 8 intensive days.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
