@@ -56,14 +56,13 @@ export default function IndexPage() {
               </div>
             </div>
             
-            {/* Skeleton Product Image */}
-            <div className="w-full h-48 bg-muted/20 rounded-t-lg flex items-center justify-center border-b border-white/20 skeleton-pulse">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent/20 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                  <span className="text-accent text-2xl font-bold">AI</span>
-                </div>
-                <span className="text-sm text-muted-foreground">Product Image</span>
-              </div>
+            {/* Apollyon Product Image */}
+            <div className="w-full h-48 overflow-hidden rounded-t-lg border-b border-white/20">
+              <img 
+                src="/drones/apollyon.png" 
+                alt="Apollyon AI Driven FPV Drone System" 
+                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
 
             <CardHeader>
@@ -105,7 +104,7 @@ export default function IndexPage() {
                   href="/products/apollyon"
                   className={buttonVariants({ className: "w-full premium-button" })}
                 >
-                  Contact for Pricing
+                  View Apollyon Details
                 </Link>
               </div>
             </CardContent>
@@ -121,14 +120,13 @@ export default function IndexPage() {
               </div>
             </div>
             
-            {/* Skeleton Product Image */}
-            <div className="w-full h-48 bg-muted/20 rounded-t-lg flex items-center justify-center border-b border-white/20 skeleton-pulse">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent/20 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                  <span className="text-accent text-2xl font-bold">FPV</span>
-                </div>
-                <span className="text-sm text-muted-foreground">Product Image</span>
-              </div>
+            {/* Abaddon Product Image */}
+            <div className="w-full h-48 overflow-hidden rounded-t-lg border-b border-white/20">
+              <img 
+                src="/drones/abaddon.png" 
+                alt="Abaddon FPV Drone System" 
+                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
 
             <CardHeader>
@@ -170,7 +168,7 @@ export default function IndexPage() {
                   href="/products/abaddon"
                   className={buttonVariants({ className: "w-full premium-button" })}
                 >
-                  Contact for Pricing
+                  View Abaddon Details
                 </Link>
               </div>
             </CardContent>
@@ -264,7 +262,7 @@ export default function IndexPage() {
                   <span className="text-accent font-bold">2</span>
                 </div>
                 <CardTitle className="text-lg">Advanced Training</CardTitle>
-                <CardDescription>3 days • OT-FPV-2</CardDescription>
+                <CardDescription>5 days • OT-FPV-2</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">

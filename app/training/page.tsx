@@ -221,8 +221,8 @@ export default function TrainingPage() {
                   <div className="w-16 h-16 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-accent font-bold text-xl">2</span>
                   </div>
-                  <CardTitle className="text-xl">Advanced Training</CardTitle>
-                  <CardDescription>3 days • OT-FPV-2</CardDescription>
+                                  <CardTitle className="text-xl">Advanced Training</CardTitle>
+                <CardDescription>5 days • OT-FPV-2</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
@@ -244,7 +244,7 @@ export default function TrainingPage() {
                     <span className="text-accent font-bold text-xl">3</span>
                   </div>
                                   <CardTitle className="text-xl">Expert Training</CardTitle>
-                <CardDescription>8 days • OT-FPV-3</CardDescription>
+                <CardDescription>5 days • OT-FPV-3</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
@@ -415,7 +415,7 @@ export default function TrainingPage() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
                     <CardTitle className="text-2xl text-accent">OT-FPV-2: Ord Tech Basic Flight and Tactics Course</CardTitle>
-                    <CardDescription className="text-lg">3 days • Classroom + hands-on flight + simulated missions</CardDescription>
+                    <CardDescription className="text-lg">5 days (40 hours) • Classroom + hands-on flight + simulated missions</CardDescription>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm">Complete Beginners</span>
@@ -573,7 +573,7 @@ export default function TrainingPage() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
                     <CardTitle className="text-2xl text-accent">OT-FPV-3: Ord Tech Basic to Advanced FPV Mission Course</CardTitle>
-                    <CardDescription className="text-lg">8 days • Complete transformation program</CardDescription>
+                    <CardDescription className="text-lg">8 days (64 hours) • Complete transformation program</CardDescription>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm">Novice Operators</span>

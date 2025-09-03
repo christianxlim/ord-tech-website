@@ -1,8 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button, buttonVariants } from "@/components/ui/button"
+import { useState } from "react"
 
 export default function AbaddonPage() {
+  const [isImageOpen, setIsImageOpen] = useState(false)
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -29,14 +34,16 @@ export default function AbaddonPage() {
             real-world combat experience integration from active conflict zones.
           </p>
 
-          {/* Skeleton Product Image */}
-          <div className="w-full h-80 bg-muted/20 rounded-lg flex items-center justify-center border border-white/20 mb-8">
-            <div className="text-center">
-              <div className="w-24 h-24 bg-accent/20 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <span className="text-accent text-4xl font-bold">FPV</span>
-              </div>
-              <span className="text-lg text-muted-foreground">Abaddon Product Image</span>
-            </div>
+          {/* Abaddon Hero Image */}
+          <div 
+            className="w-full h-80 overflow-hidden rounded-lg border border-white/20 mb-8 bg-card cursor-pointer hover:border-accent/50 transition-colors"
+            onClick={() => setIsImageOpen(true)}
+          >
+            <img 
+              src="/drones/abaddon.png" 
+              alt="Abaddon FPV 7&quot; &amp; 10&quot; SUAS" 
+              className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+            />
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -545,6 +552,29 @@ export default function AbaddonPage() {
         {/* Bottom spacing */}
         <div className="pb-16"></div>
       </section>
+
+      {/* Image Modal */}
+      {isImageOpen && (
+        <div 
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={() => setIsImageOpen(false)}
+        >
+          <div className="relative max-w-6xl max-h-full">
+            <img 
+              src="/drones/abaddon.png" 
+              alt="Abaddon FPV 7&quot; &amp; 10&quot; SUAS - Full Size" 
+              className="max-w-full max-h-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button 
+              className="absolute top-4 right-4 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors"
+              onClick={() => setIsImageOpen(false)}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
