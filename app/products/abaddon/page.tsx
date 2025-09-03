@@ -40,7 +40,7 @@ export default function AbaddonPage() {
             onClick={() => setIsImageOpen(true)}
           >
             <img 
-              src="/drones/abaddon.png" 
+              src="/drones/abaddon-drop-shadow.png" 
               alt="Abaddon FPV 7&quot; &amp; 10&quot; SUAS" 
               className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
             />
@@ -561,7 +561,7 @@ export default function AbaddonPage() {
         >
           <div className="relative max-w-6xl max-h-full">
             <img 
-              src="/drones/abaddon.png" 
+              src="/drones/abaddon-drop-shadow.png" 
               alt="Abaddon FPV 7&quot; &amp; 10&quot; SUAS - Full Size" 
               className="max-w-full max-h-full object-contain"
               onClick={(e) => e.stopPropagation()}

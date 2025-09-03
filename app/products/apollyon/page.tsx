@@ -37,7 +37,7 @@ export default function ApollyonPage() {
             onClick={() => setIsImageOpen(true)}
           >
             <img 
-              src="/drones/apollyon.png" 
+              src="/drones/apollyon-drop-shadow.png" 
               alt="Apollyon AI Driven FPV 7&quot; &amp; 10&quot; SUAS" 
               className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
             />
@@ -498,7 +498,7 @@ export default function ApollyonPage() {
         >
           <div className="relative max-w-6xl max-h-full">
             <img 
-              src="/drones/apollyon.png" 
+              src="/drones/apollyon-drop-shadow.png" 
               alt="Apollyon AI Driven FPV 7&quot; &amp; 10&quot; SUAS - Full Size" 
               className="max-w-full max-h-full object-contain"
               onClick={(e) => e.stopPropagation()}

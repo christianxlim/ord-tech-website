@@ -44,7 +44,7 @@ export default function IndexPage() {
             Combat-proven FPV drone systems engineered for mission-critical operations
           </p>
         </div>
-
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Apollyon AI FPV Card */}
           <Card className="relative overflow-hidden group premium-card">
@@ -54,18 +54,18 @@ export default function IndexPage() {
                   Deployed in Various Areas
                 </span>
               </div>
-            </div>
+          </div>
             
             {/* Apollyon Product Image */}
             <div className="w-full h-48 overflow-hidden rounded-t-lg border-b border-white/20">
               <img 
-                src="/drones/apollyon.png" 
+                src="/drones/apollyon-drop-shadow.png" 
                 alt="Apollyon AI Driven FPV Drone System" 
                 className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+        </div>
 
-            <CardHeader>
+              <CardHeader>
               <CardTitle className="text-2xl">Apollyon AI Driven FPV 7&quot; &amp; 10&quot; SUAS</CardTitle>
                 <CardDescription className="text-base">
                 AI-driven autonomous capabilities with real-time object detection and tracking. 
@@ -123,7 +123,7 @@ export default function IndexPage() {
             {/* Abaddon Product Image */}
             <div className="w-full h-48 overflow-hidden rounded-t-lg border-b border-white/20">
               <img 
-                src="/drones/abaddon.png" 
+                src="/drones/abaddon-drop-shadow.png" 
                 alt="Abaddon FPV Drone System" 
                 className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
               />
