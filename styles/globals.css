@@ -95,14 +95,9 @@
   border: 1px solid rgba(60, 60, 60, 0.2);
 }
 
-/* Enhanced glassmorphism for video overlay */
-.video-glass-overlay {
-  background: linear-gradient(135deg, 
-    rgba(25, 25, 25, 0.4) 0%, 
-    rgba(20, 20, 20, 0.5) 50%, 
-    rgba(15, 15, 15, 0.6) 100%);
-  backdrop-filter: blur(12px) saturate(120%);
-  -webkit-backdrop-filter: blur(12px) saturate(120%);
+/* Black background overlay */
+.black-background-overlay {
+  background: black;
 }
 
   .glow-blue {

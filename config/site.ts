@@ -4,8 +4,8 @@ export const siteConfig = {
   name: "Ordnance Technologies",
   description:
     "Advanced autonomous systems delivering mission-critical reliability for defense operations.",
-  // Vimeo video ID from https://vimeo.com/manage/videos/1110449400
-  vimeoVideoId: "1110449400", // Background video for the website
+  // Background configuration
+  backgroundColor: "black", // Plain black background
   mainNav: [
     {
       title: "Home",

@@ -39,33 +39,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontDisplay.variable
           )}
         >
-          {/* Fixed background video - Vimeo */}
-          <div className="fixed inset-0 -z-10 overflow-hidden">
-            {/* Direct Vimeo embed - extra oversized for mobile coverage */}
-            <iframe
-              src="https://player.vimeo.com/video/1110449400?autoplay=1&loop=1&muted=1&background=1&controls=0&title=0&byline=0&portrait=0&quality=720p&speed=1"
-              style={{ 
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                width: '300vw',
-                height: '300vh',
-                minWidth: '300vw',
-                minHeight: '300vh',
-                transform: 'translate(-50%, -50%)',
-                border: 'none',
-                pointerEvents: 'none',
-              }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              title="Background Video"
-            />
-            {/* Fallback background - changed to black */}
-            <div className="absolute inset-0 bg-black" style={{ zIndex: -1 }} />
-            {/* Overlay for readability */}
-            <div className="absolute inset-0 bg-black/30" style={{ zIndex: 1 }} />
-          </div>
+          {/* Plain black background */}
+          <div className="fixed inset-0 -z-10 bg-black overflow-hidden"></div>
           
           <div className="relative flex min-h-screen flex-col">
             <SiteHeader />
