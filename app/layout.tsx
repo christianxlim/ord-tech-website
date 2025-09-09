@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site"
 import { fontSans, fontDisplay } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
+import { Squares } from "@/components/ui/squares-background"
 
 
 export const metadata: Metadata = {
@@ -39,8 +40,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontDisplay.variable
           )}
         >
-          {/* Plain black background */}
-          <div className="fixed inset-0 -z-10 bg-black overflow-hidden"></div>
+          {/* Animated grid background */}
+          <div className="fixed inset-0 -z-10 overflow-hidden">
+            <Squares 
+              direction="diagonal"
+              speed={0.5}
+              borderColor="#333"
+              squareSize={40}
+              hoverFillColor="#222"
+              className="w-full h-full"
+            />
+          </div>
           
           <div className="relative flex min-h-screen flex-col">
             <SiteHeader />

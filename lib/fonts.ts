@@ -1,18 +1,9 @@
-import { JetBrains_Mono as FontMono, Rubik as FontSans, Inter as FontDisplay } from "next/font/google"
+import { JetBrains_Mono as FontMono } from "next/font/google"
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["300", "400", "500", "700", "900"], // Light, Regular, Medium, Bold, Black
-})
+export const fontSans = GeistSans
 
-export const fontMono = FontMono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+export const fontMono = GeistMono
 
-export const fontDisplay = FontDisplay({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["400", "500", "600", "700", "800", "900"], // Regular, Medium, Semibold, Bold, Extra Bold, Black
-})
+export const fontDisplay = GeistSans
