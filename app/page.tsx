@@ -26,7 +26,7 @@ export default function IndexPage() {
             View Products
           </Link>
           <Link
-            href="#training"
+            href="#training-overview"
             className={buttonVariants({ variant: "outline" })}
           >
             View Training
@@ -198,6 +198,109 @@ export default function IndexPage() {
         </div>
       </section>
       
+      {/* Featured Course Section */}
+      <section id="featured-course" className="container py-12 sm:py-16 border-t border-white/20">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-accent">Upcoming Training Course</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Limited seats available for our next scheduled advanced training session
+            </p>
+          </div>
+          
+          <Card className="relative overflow-hidden border-accent/30 bg-gradient-to-br from-accent/5 via-transparent to-primary/5">
+            {/* Badges */}
+            <div className="absolute top-4 right-4 z-10">
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-medium border border-red-500/30">
+                  Only 7 Seats
+                </span>
+                <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium border border-green-500/30">
+                  Open Registration
+                </span>
+              </div>
+            </div>
+
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-accent">
+                Advanced FPV and Fuzing Training
+              </CardTitle>
+              <CardDescription className="text-lg">
+                September 22-26, 2024 • Agony North Range, Colorado Springs
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {/* Quick Details */}
+                <div className="lg:col-span-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-accent">5</div>
+                      <div className="text-sm text-muted-foreground">Days</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-accent">7</div>
+                      <div className="text-sm text-muted-foreground">Seats Left</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-accent">$2,857</div>
+                      <div className="text-sm text-muted-foreground">Per Person</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-accent">CO</div>
+                      <div className="text-sm text-muted-foreground">Location</div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-muted-foreground mb-4">
+                    Intensive advanced training program combining FPV operations with tactical applications. 
+                    Transform your skills with hands-on training at our Colorado Springs facility.
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Advanced Level</span>
+                    <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Tactical Operations</span>
+                    <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Limited Enrollment</span>
+                  </div>
+                </div>
+
+                {/* Action Column */}
+                <div className="flex flex-col justify-center space-y-4">
+                  <div className="bg-accent/10 rounded-lg p-4 border border-accent/20 text-center">
+                    <div className="text-sm font-medium text-accent mb-2">Registration Required</div>
+                    <div className="text-xs text-muted-foreground mb-3">
+                      Contact our team to secure your seat
+                    </div>
+                    <Link
+                      href="/contact?course=advanced-fpv-sept-2024&subject=Course%20Registration%20Inquiry%20-%20Advanced%20FPV%20Training%20Sept%2022-26"
+                      className={buttonVariants({ 
+                        size: "lg", 
+                        className: "w-full premium-button bg-accent hover:bg-accent/90" 
+                      })}
+                    >
+                      Contact to Register
+                    </Link>
+                  </div>
+                  
+                  <div className="text-center">
+                    <Link
+                      href="/training"
+                      className={buttonVariants({ 
+                        variant: "outline",
+                        className: "w-full border-accent text-accent hover:bg-accent/10" 
+                      })}
+                    >
+                      View All Training
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      
       {/* Training Programs Section */}
       <section id="training-overview" className="container py-12 sm:py-16 border-t border-white/20">
         <div className="text-center mb-12 sm:mb-16">
@@ -310,7 +413,7 @@ export default function IndexPage() {
                 View Training Courses
               </Link>
               <Link
-                href="#contact"
+                href="/contact"
                 className={buttonVariants({ className: "bg-primary text-white hover:bg-primary/90 shadow-lg" })}
               >
                 Schedule Consultation

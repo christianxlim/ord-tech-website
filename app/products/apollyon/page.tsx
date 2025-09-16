@@ -44,9 +44,12 @@ export default function ApollyonPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8">
+            <Link
+              href="/contact?product=apollyon&subject=Apollyon%20Pricing%20Inquiry"
+              className={buttonVariants({ size: "lg", className: "text-lg px-8" })}
+            >
               Contact for Pricing
-            </Button>
+            </Link>
             <Link
               href="#specifications"
               className={buttonVariants({ variant: "outline", size: "lg", className: "text-lg px-8" })}
@@ -206,9 +209,12 @@ export default function ApollyonPage() {
             <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-8 border border-accent/20">
               <h3 className="text-2xl font-bold mb-4 text-accent">Interested in Apollyon Specifications?</h3>
               <p className="text-muted-foreground mb-6">Get detailed technical documentation and pricing information</p>
-              <Button size="lg" className="premium-button text-lg px-8 bg-accent hover:bg-accent/90">
+              <Link
+                href="/contact?product=apollyon&subject=Apollyon%20Technical%20Documentation%20Request"
+                className={buttonVariants({ size: "lg", className: "premium-button text-lg px-8 bg-accent hover:bg-accent/90" })}
+              >
                 Request Technical Details
-              </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -314,12 +320,18 @@ export default function ApollyonPage() {
               <h3 className="text-xl font-bold mb-3">Custom Payload Configuration?</h3>
               <p className="text-muted-foreground mb-4">Discuss mission-specific payload requirements with our team</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Button className="premium-button bg-primary hover:bg-primary/90">
+                <Link
+                  href="/contact?product=apollyon&subject=Apollyon%20Engineering%20Team%20Contact"
+                  className={buttonVariants({ className: "premium-button bg-primary hover:bg-primary/90" })}
+                >
                   Contact Engineering
-                </Button>
-                <Button variant="outline" className="border-accent text-accent hover:bg-accent/10">
+                </Link>
+                <Link
+                  href="/#products"
+                  className={buttonVariants({ variant: "outline", className: "border-accent text-accent hover:bg-accent/10" })}
+                >
                   View All Products
-                </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -457,9 +469,12 @@ export default function ApollyonPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-                <Button size="lg" className="premium-button text-xl px-12 py-4 bg-accent hover:bg-accent/90 shadow-lg">
+                <Link
+                  href="/contact?product=apollyon&subject=Apollyon%20Pricing%20and%20Deployment%20Inquiry"
+                  className={buttonVariants({ size: "lg", className: "premium-button text-xl px-12 py-4 bg-accent hover:bg-accent/90 shadow-lg" })}
+                >
                   Contact for Pricing
-                </Button>
+                </Link>
                 <Link
                   href="/products/abaddon"
                   className={buttonVariants({ variant: "outline", size: "lg", className: "text-xl px-12 py-4 border-accent text-accent hover:bg-accent/10 shadow-lg" })}

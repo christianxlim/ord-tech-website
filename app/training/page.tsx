@@ -18,9 +18,12 @@ export default function TrainingPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8">
+            <Link
+              href="/contact?subject=Training%20Inquiry"
+              className={buttonVariants({ size: "lg", className: "text-lg px-8" })}
+            >
               Contact for Training
-            </Button>
+            </Link>
             <Link
               href="#courses"
               className={buttonVariants({ variant: "outline", size: "lg", className: "text-lg px-8" })}
@@ -28,6 +31,117 @@ export default function TrainingPage() {
               View Course Catalog
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Upcoming Course - Featured */}
+      <section className="container py-12 sm:py-16 border-t border-white/20">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4 text-accent">Upcoming Course</h2>
+            <p className="text-lg text-muted-foreground">
+              Register now for our next scheduled training session
+            </p>
+          </div>
+          
+          <Card className="relative overflow-hidden border-accent/30 bg-gradient-to-br from-accent/5 via-transparent to-primary/5">
+            {/* Limited Seats Badge */}
+            <div className="absolute top-4 right-4 z-10">
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-medium border border-red-500/30">
+                  Limited Seats
+                </span>
+                <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium border border-accent/30">
+                  Open Registration
+                </span>
+              </div>
+            </div>
+
+            <CardHeader className="pb-4">
+              <CardTitle className="text-2xl font-bold text-accent mb-2">
+                Advanced FPV and Fuzing Training
+              </CardTitle>
+              <CardDescription className="text-lg">
+                Intensive 5-day advanced training program for FPV operations and tactical applications
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                {/* Course Details */}
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-accent mb-3">Course Details:</h4>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-accent rounded-full"></div>
+                      <span className="text-sm">
+                        <span className="font-medium">Dates:</span> September 22-26, 2024
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-accent rounded-full"></div>
+                      <span className="text-sm">
+                        <span className="font-medium">Location:</span> Agony North Range, Colorado Springs
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-accent rounded-full"></div>
+                      <span className="text-sm">
+                        <span className="font-medium">Price:</span> $2,857 per person
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      <span className="text-sm">
+                        <span className="font-medium">Available Seats:</span> 7 students
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Registration Info */}
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-accent mb-3">Registration Information:</h4>
+                  
+                  <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span className="text-sm font-medium text-green-400">Open to Public</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                        <span className="text-sm">First-come, first-served basis</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <span className="text-sm">Only 7 seats available</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-4">
+                    <Link
+                      href="/contact?course=advanced-fpv-sept-2024&subject=Course%20Registration%20Inquiry%20-%20Advanced%20FPV%20Training%20Sept%2022-26"
+                      className={buttonVariants({ 
+                        size: "lg", 
+                        className: "w-full premium-button bg-accent hover:bg-accent/90 text-lg py-3 shadow-lg" 
+                      })}
+                    >
+                      Contact to Register
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t border-accent/20 pt-4">
+                <p className="text-center text-sm text-muted-foreground">
+                  Contact our training team to secure your seat for this advanced course
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -165,12 +279,18 @@ export default function TrainingPage() {
             <h3 className="text-2xl font-bold mb-4 text-accent">Ready to Start Training?</h3>
             <p className="text-muted-foreground mb-6">Discuss your training needs and course selection with our experts</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="premium-button text-lg px-8 bg-accent hover:bg-accent/90">
+              <Link
+                href="/contact?subject=Training%20Consultation%20Request"
+                className={buttonVariants({ size: "lg", className: "premium-button text-lg px-8 bg-accent hover:bg-accent/90" })}
+              >
                 Schedule Consultation
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 border-accent text-accent hover:bg-accent/10">
+              </Link>
+              <Link
+                href="/contact?subject=Course%20Catalog%20Request"
+                className={buttonVariants({ variant: "outline", size: "lg", className: "text-lg px-8 border-accent text-accent hover:bg-accent/10" })}
+              >
                 Download Course Catalog
-              </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -655,12 +775,18 @@ export default function TrainingPage() {
             <h3 className="text-xl font-bold mb-3">Custom Training Program?</h3>
             <p className="text-muted-foreground mb-4">We can tailor courses to your specific operational requirements</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button className="premium-button bg-primary hover:bg-primary/90">
+              <Link
+                href="/contact?subject=Custom%20Training%20Program%20Inquiry"
+                className={buttonVariants({ className: "premium-button bg-primary hover:bg-primary/90" })}
+              >
                 Discuss Custom Training
-              </Button>
-              <Button variant="outline" className="border-accent text-accent hover:bg-accent/10">
+              </Link>
+              <Link
+                href="#courses"
+                className={buttonVariants({ variant: "outline", className: "border-accent text-accent hover:bg-accent/10" })}
+              >
                 View Standard Courses
-              </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -738,9 +864,12 @@ export default function TrainingPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-                <Button size="lg" className="premium-button text-xl px-12 py-4 bg-accent hover:bg-accent/90 shadow-lg">
+                <Link
+                  href="/contact?subject=Training%20Team%20Contact"
+                  className={buttonVariants({ size: "lg", className: "premium-button text-xl px-12 py-4 bg-accent hover:bg-accent/90 shadow-lg" })}
+                >
                   Contact Training Team
-                </Button>
+                </Link>
                 <Link
                   href="/#products"
                   className={buttonVariants({ variant: "outline", size: "lg", className: "text-xl px-12 py-4 border-accent text-accent hover:bg-accent/10 shadow-lg" })}

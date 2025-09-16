@@ -1,7 +1,50 @@
+'use client'
+
+import { useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function ContactPage() {
+  const searchParams = useSearchParams()
+  const [formData, setFormData] = useState({
+    subject: '',
+    message: ''
+  })
+
+  useEffect(() => {
+    const course = searchParams.get('course')
+    const subject = searchParams.get('subject')
+    
+    if (course && subject) {
+      setFormData({
+        subject: decodeURIComponent(subject),
+        message: "I'm interested in registering for the Advanced FPV and Fuzing Training course (September 22-26, 2024) at Agony North Range, Colorado Springs. Please provide information about the registration process and any prerequisites.\n\nThank you."
+      })
+    }
+  }, [searchParams])
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.get('subject') as string || 'Website Contact Form')
+    const body = encodeURIComponent(`
+Name: ${formData.get('firstName')} ${formData.get('lastName')}
+Email: ${formData.get('email')}
+Organization: ${formData.get('organization') || 'Not specified'}
+
+Message:
+${formData.get('message')}
+
+---
+Sent from ordtechnologies.com contact form
+    `.trim())
+    
+    window.location.href = `mailto:info@ordtechnologies.com?subject=${subject}&body=${body}`
+  }
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -26,7 +69,7 @@ export default function ContactPage() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium mb-2">
@@ -83,20 +126,16 @@ export default function ContactPage() {
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
                     Subject *
                   </label>
-                  <select
+                  <input
+                    type="text"
                     id="subject"
                     name="subject"
                     required
+                    value={formData.subject}
+                    onChange={(e) => setFormData(prev => ({ ...prev, subject: e.target.value }))}
+                    placeholder="Course Registration Inquiry - Advanced FPV Training Sept 22-26"
                     className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-                  >
-                    <option value="">Select a topic</option>
-                    <option value="product-inquiry">Product Inquiry</option>
-                    <option value="technical-specs">Technical Specifications</option>
-                    <option value="training-programs">Training Programs</option>
-                    <option value="deployment-planning">Deployment Planning</option>
-                    <option value="partnership">Partnership Opportunities</option>
-                    <option value="other">Other</option>
-                  </select>
+                  />
                 </div>
 
                 <div>
@@ -108,6 +147,8 @@ export default function ContactPage() {
                     name="message"
                     rows={6}
                     required
+                    value={formData.message}
+                    onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                     placeholder="Please describe your operational requirements, timeline, and any specific questions about our drone systems or training programs..."
                     className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent resize-vertical"
                   ></textarea>

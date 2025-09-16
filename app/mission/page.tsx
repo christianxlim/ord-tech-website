@@ -51,7 +51,7 @@ export default function MissionPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/products"
+              href="/#products"
               className={buttonVariants({ size: "lg" })}
             >
               View Products
