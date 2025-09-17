@@ -11,6 +11,7 @@ export default function ContactPage() {
     subject: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {
     const course = searchParams.get('course')
@@ -24,26 +25,40 @@ export default function ContactPage() {
     }
   }, [searchParams])
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsSubmitting(true)
+    
     const form = e.currentTarget
     const formData = new FormData(form)
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent(formData.get('subject') as string || 'Website Contact Form')
-    const body = encodeURIComponent(`
-Name: ${formData.get('firstName')} ${formData.get('lastName')}
-Email: ${formData.get('email')}
-Organization: ${formData.get('organization') || 'Not specified'}
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: `${formData.get('firstName')} ${formData.get('lastName')}`,
+          email: formData.get('email'),
+          organization: formData.get('organization') || 'Not specified',
+          subject: formData.get('subject'),
+          message: formData.get('message'),
+        }),
+      });
 
-Message:
-${formData.get('message')}
-
----
-Sent from ordtechnologies.com contact form
-    `.trim())
-    
-    window.location.href = `mailto:info@ordtechnologies.com?subject=${subject}&body=${body}`
+      const result = await res.json();
+      if (result.success) {
+        alert("Message sent! ✅");
+        form.reset();
+        setFormData({ subject: '', message: '' });
+      } else {
+        alert("Something went wrong ❌");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Something went wrong ❌");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
   return (
     <div className="min-h-screen">
@@ -155,8 +170,8 @@ Sent from ordtechnologies.com contact form
                 </div>
 
                 <div className="pt-4">
-                  <Button type="submit" size="lg" className="w-full md:w-auto">
-                    Send Message
+                  <Button type="submit" size="lg" className="w-full md:w-auto" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </div>
               </form>
