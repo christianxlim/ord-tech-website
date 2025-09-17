@@ -9,7 +9,7 @@ export async function POST(req) {
     const { name, email, organization, subject, message } = body;
 
     await resend.emails.send({
-      from: "Website Contact <info@ordtechnologies.com>", // verified domain sender
+      from: "Acme <onboarding@resend.dev>", // sandbox sender for testing
       to: "info@ordtechnologies.com",
       subject: subject || "New Contact Form Submission",
       text: `
