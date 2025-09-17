@@ -273,7 +273,7 @@ export default function IndexPage() {
                       Contact our team to secure your seat
                     </div>
                     <Link
-                      href="/contact?course=advanced-fpv-sept-2024&subject=Course%20Registration%20Inquiry%20-%20Advanced%20FPV%20Training%20Sept%2022-26"
+                      href="/contact?source=course-registration&course=advanced-fpv-sept-2024&subject=Course%20Registration%20Inquiry%20-%20Advanced%20FPV%20Training%20Sept%2022-26"
                       className={buttonVariants({ 
                         size: "lg", 
                         className: "w-full premium-button bg-accent hover:bg-accent/90" 
@@ -413,7 +413,7 @@ export default function IndexPage() {
                 View Training Courses
               </Link>
               <Link
-                href="/contact"
+                href="/contact?source=homepage-cta"
                 className={buttonVariants({ className: "bg-primary text-white hover:bg-primary/90 shadow-lg" })}
               >
                 Schedule Consultation
@@ -505,7 +505,7 @@ export default function IndexPage() {
                 </a>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Link
-                    href="/contact"
+                    href="/contact?source=homepage-cta"
                     className={buttonVariants()}
                   >
                     Contact Form

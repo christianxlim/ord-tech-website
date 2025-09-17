@@ -57,7 +57,7 @@ export default function MissionPage() {
               View Products
             </Link>
             <Link
-              href="/contact"
+              href="/contact?source=homepage-cta"
               className={buttonVariants({ variant: "outline", size: "lg" })}
             >
               Get in Touch

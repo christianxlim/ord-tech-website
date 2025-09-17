@@ -48,7 +48,7 @@ export default function AbaddonPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact?product=abaddon&subject=Abaddon%20Pricing%20Inquiry"
+              href="/contact?source=abaddon-page&product=abaddon&subject=Abaddon%20Pricing%20Inquiry"
               className={buttonVariants({ size: "lg", className: "text-lg px-8" })}
             >
               Contact for Pricing
@@ -264,7 +264,7 @@ export default function AbaddonPage() {
               <h3 className="text-2xl font-bold mb-4 text-accent">Need Abaddon Technical Details?</h3>
               <p className="text-muted-foreground mb-6">Get comprehensive specifications and battlefield performance data</p>
               <Link
-                href="/contact?product=abaddon&subject=Abaddon%20Technical%20Documentation%20Request"
+                href="/contact?source=abaddon-page&product=abaddon&subject=Abaddon%20Technical%20Documentation%20Request"
                 className={buttonVariants({ size: "lg", className: "premium-button text-lg px-8 bg-accent hover:bg-accent/90" })}
               >
                 Request Documentation
@@ -451,7 +451,7 @@ export default function AbaddonPage() {
               <p className="text-muted-foreground mb-4">Discuss Abaddon&apos;s adaptability for your operational environment</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  href="/contact?product=abaddon&subject=Abaddon%20Operations%20Team%20Contact"
+                  href="/contact?source=abaddon-page&product=abaddon&subject=Abaddon%20Operations%20Team%20Contact"
                   className={buttonVariants({ className: "premium-button bg-primary hover:bg-primary/90" })}
                 >
                   Contact Operations Team
@@ -533,7 +533,7 @@ export default function AbaddonPage() {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
                 <Link
-                  href="/contact?product=abaddon&subject=Abaddon%20Pricing%20and%20Deployment%20Inquiry"
+                  href="/contact?source=abaddon-page&product=abaddon&subject=Abaddon%20Pricing%20and%20Deployment%20Inquiry"
                   className={buttonVariants({ size: "lg", className: "premium-button text-xl px-12 py-4 bg-accent hover:bg-accent/90 shadow-lg" })}
                 >
                   Contact for Pricing

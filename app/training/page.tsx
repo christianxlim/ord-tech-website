@@ -19,7 +19,7 @@ export default function TrainingPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact?subject=Training%20Inquiry"
+              href="/contact?source=training-general&subject=Training%20Inquiry"
               className={buttonVariants({ size: "lg", className: "text-lg px-8" })}
             >
               Contact for Training
@@ -123,7 +123,7 @@ export default function TrainingPage() {
 
                   <div className="pt-4">
                     <Link
-                      href="/contact?course=advanced-fpv-sept-2024&subject=Course%20Registration%20Inquiry%20-%20Advanced%20FPV%20Training%20Sept%2022-26"
+                      href="/contact?source=course-registration&course=advanced-fpv-sept-2024&subject=Course%20Registration%20Inquiry%20-%20Advanced%20FPV%20Training%20Sept%2022-26"
                       className={buttonVariants({ 
                         size: "lg", 
                         className: "w-full premium-button bg-accent hover:bg-accent/90 text-lg py-3 shadow-lg" 
@@ -280,13 +280,13 @@ export default function TrainingPage() {
             <p className="text-muted-foreground mb-6">Discuss your training needs and course selection with our experts</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact?subject=Training%20Consultation%20Request"
+                href="/contact?source=training-general&subject=Training%20Consultation%20Request"
                 className={buttonVariants({ size: "lg", className: "premium-button text-lg px-8 bg-accent hover:bg-accent/90" })}
               >
                 Schedule Consultation
               </Link>
               <Link
-                href="/contact?subject=Course%20Catalog%20Request"
+                href="/contact?source=training-general&subject=Course%20Catalog%20Request"
                 className={buttonVariants({ variant: "outline", size: "lg", className: "text-lg px-8 border-accent text-accent hover:bg-accent/10" })}
               >
                 Download Course Catalog
@@ -776,7 +776,7 @@ export default function TrainingPage() {
             <p className="text-muted-foreground mb-4">We can tailor courses to your specific operational requirements</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                href="/contact?subject=Custom%20Training%20Program%20Inquiry"
+                href="/contact?source=training-general&subject=Custom%20Training%20Program%20Inquiry"
                 className={buttonVariants({ className: "premium-button bg-primary hover:bg-primary/90" })}
               >
                 Discuss Custom Training
@@ -865,7 +865,7 @@ export default function TrainingPage() {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
                 <Link
-                  href="/contact?subject=Training%20Team%20Contact"
+                  href="/contact?source=training-general&subject=Training%20Team%20Contact"
                   className={buttonVariants({ size: "lg", className: "premium-button text-xl px-12 py-4 bg-accent hover:bg-accent/90 shadow-lg" })}
                 >
                   Contact Training Team

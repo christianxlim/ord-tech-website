@@ -33,6 +33,8 @@ export default function ContactPage() {
     const formData = new FormData(form)
     
     try {
+      const source = searchParams.get('source') || '';
+      
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -42,6 +44,7 @@ export default function ContactPage() {
           organization: formData.get('organization') || 'Not specified',
           subject: formData.get('subject'),
           message: formData.get('message'),
+          source: source,
         }),
       });
 
