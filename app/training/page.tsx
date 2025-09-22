@@ -76,7 +76,7 @@ export default function TrainingPage() {
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
                       <span className="text-sm">
-                        <span className="font-medium">Dates:</span> September 22-26, 2024
+                        <span className="font-medium">Dates:</span> September 22-26, 2025
                       </span>
                     </div>
                     <div className="flex items-center gap-3">

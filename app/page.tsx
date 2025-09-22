@@ -226,7 +226,7 @@ export default function IndexPage() {
                 Advanced FPV and Fuzing Training
               </CardTitle>
               <CardDescription className="text-lg">
-                September 22-26, 2024 • Agony North Range, Colorado Springs
+                September 22-26, 2025 • Agony North Range, Colorado Springs
               </CardDescription>
             </CardHeader>
 

@@ -20,7 +20,7 @@ export default function ContactPage() {
     if (course && subject) {
       setFormData({
         subject: decodeURIComponent(subject),
-        message: "I'm interested in registering for the Advanced FPV and Fuzing Training course (September 22-26, 2024) at Agony North Range, Colorado Springs. Please provide information about the registration process and any prerequisites.\n\nThank you."
+        message: "I'm interested in registering for the Advanced FPV and Fuzing Training course (September 22-26, 2025) at Agony North Range, Colorado Springs. Please provide information about the registration process and any prerequisites.\n\nThank you."
       })
     }
   }, [searchParams])
