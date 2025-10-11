@@ -244,10 +244,6 @@ export default function IndexPage() {
                       <div className="text-sm text-muted-foreground">Seats Left</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-lg font-bold text-accent">$2,857</div>
-                      <div className="text-sm text-muted-foreground">Per Person</div>
-                    </div>
-                    <div className="text-center">
                       <div className="text-lg font-bold text-accent">CO</div>
                       <div className="text-sm text-muted-foreground">Location</div>
                     </div>

@@ -433,7 +433,7 @@ export default function ApollyonPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Premium AI-driven drone at competitive pricing ($1092 - $1454), 
+                  Premium AI-driven drone at competitive pricing, 
                   delivering advanced features without compromising operational capability.
                 </p>
               </CardContent>

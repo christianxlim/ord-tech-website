@@ -430,7 +430,7 @@ export default function AbaddonPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-sm">Lower cost ($1092-$1454)</span>
+                  <span className="text-sm">Lower cost</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
@@ -473,7 +473,7 @@ export default function AbaddonPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">Flexible Pricing for Every Mission</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Broad pricing range ($1793 - $22500) appeals to various military budgets while 
+            Broad pricing range appeals to various military budgets while 
             maintaining high-performance without sacrificing quality.
           </p>
           
@@ -481,7 +481,7 @@ export default function AbaddonPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Budget-Conscious</CardTitle>
-                <CardDescription>Starting at $1793</CardDescription>
+                <CardDescription>Entry-level configurations</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
@@ -505,7 +505,7 @@ export default function AbaddonPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Premium Systems</CardTitle>
-                <CardDescription>Up to $22500</CardDescription>
+                <CardDescription>Advanced configurations</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">

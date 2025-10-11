@@ -86,12 +86,6 @@ export default function TrainingPage() {
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-sm">
-                        <span className="font-medium">Price:</span> $2,857 per person
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                       <span className="text-sm">
                         <span className="font-medium">Available Seats:</span> 7 students
