@@ -3,6 +3,7 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { WorldMap } from "@/components/ui/map"
 
 export default function IndexPage() {
   return (
@@ -177,7 +178,7 @@ export default function IndexPage() {
         
         {/* Mid-page CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-6 border border-primary/20">
+          <div className="glass-blue rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3">Need Custom Specifications?</h3>
             <p className="text-muted-foreground mb-4">Discuss mission-specific requirements and custom configurations</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -197,100 +198,139 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
+
+      {/* Global Operations & Deployment Reach Section */}
+      <section id="global-operations" className="container py-12 sm:py-16 border-t border-white/20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Global Operational Reach</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Our systems are currently deployed in active operations worldwide, delivering mission-critical 
+            performance in the most challenging environments
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          {/* Map Container */}
+          <div className="map-container mb-12">
+            <WorldMap
+              dots={[
+                {
+                  start: { lat: 38.8339, lng: -104.8214, label: "Colorado Springs" },
+                  end: { lat: 50.4501, lng: 30.5234, label: "Eastern Europe" }
+                },
+                {
+                  start: { lat: 38.8339, lng: -104.8214, label: "Colorado Springs" },
+                  end: { lat: 33.3152, lng: 44.3661, label: "Middle East" }
+                },
+                {
+                  start: { lat: 38.8339, lng: -104.8214, label: "Colorado Springs" },
+                  end: { lat: 36.2048, lng: 138.2529, label: "Asia-Pacific" }
+                }
+              ]}
+              lineColor="#149DCC"
+              showLabels={true}
+              animationDuration={2.5}
+              loop={true}
+            />
+          </div>
+
+          {/* Deployment Statistics */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="deployment-stat-card text-center">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-3xl font-bold text-accent">24/7</CardTitle>
+                <CardDescription className="text-base">
+                  Global Support Coverage
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Round-the-clock technical support and mission assistance across all time zones
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="deployment-stat-card text-center">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-3xl font-bold text-accent">100%</CardTitle>
+                <CardDescription className="text-base">
+                  Mission Reliability
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Proven performance in contested environments with consistent uptime
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="deployment-stat-card text-center">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-3xl font-bold text-accent">Multiple</CardTitle>
+                <CardDescription className="text-base">
+                  Active Deployment Zones
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Currently operational in various areas worldwide with expanding reach
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Integration Note */}
+          <div className="mt-12 text-center">
+            <div className="glass-blue rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-3">Worldwide Training & Support</h3>
+              <p className="text-muted-foreground mb-4">
+                From our Colorado Springs headquarters, we provide comprehensive training, technical support, 
+                and deployment assistance to ensure mission success wherever you operate.
+              </p>
+              <Link
+                href="/contact?source=global-operations"
+                className={buttonVariants({ className: "premium-button bg-accent hover:bg-accent/90" })}
+              >
+                Discuss Your Requirements
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       
-      {/* Featured Course Section */}
+      {/* Featured Course Section - Placeholder */}
       <section id="featured-course" className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-accent">Upcoming Training Course</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-accent">Upcoming Events</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Limited seats available for our next scheduled advanced training session
+              Training events and courses will be posted here
             </p>
           </div>
           
           <Card className="relative overflow-hidden border-accent/30 bg-gradient-to-br from-accent/5 via-transparent to-primary/5">
-            {/* Badges */}
-            <div className="absolute top-4 right-4 z-10">
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-medium border border-red-500/30">
-                  Only 7 Seats
-                </span>
-                <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium border border-green-500/30">
-                  Open Registration
-                </span>
-              </div>
-            </div>
-
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold text-accent">
-                Advanced FPV and Fuzing Training
-              </CardTitle>
-              <CardDescription className="text-lg">
-                September 22-26, 2025 • Agony North Range, Colorado Springs
-              </CardDescription>
-            </CardHeader>
-
-            <CardContent>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/* Quick Details */}
-                <div className="lg:col-span-2">
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-accent">5</div>
-                      <div className="text-sm text-muted-foreground">Days</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-accent">7</div>
-                      <div className="text-sm text-muted-foreground">Seats Left</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-accent">CO</div>
-                      <div className="text-sm text-muted-foreground">Location</div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-muted-foreground mb-4">
-                    Intensive advanced training program combining FPV operations with tactical applications. 
-                    Transform your skills with hands-on training at our Colorado Springs facility.
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Advanced Level</span>
-                    <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Tactical Operations</span>
-                    <span className="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Limited Enrollment</span>
-                  </div>
-                </div>
-
-                {/* Action Column */}
-                <div className="flex flex-col justify-center space-y-4">
-                  <div className="bg-accent/10 rounded-lg p-4 border border-accent/20 text-center">
-                    <div className="text-sm font-medium text-accent mb-2">Registration Required</div>
-                    <div className="text-xs text-muted-foreground mb-3">
-                      Contact our team to secure your seat
-                    </div>
-                    <Link
-                      href="/contact?source=course-registration&course=advanced-fpv-sept-2024&subject=Course%20Registration%20Inquiry%20-%20Advanced%20FPV%20Training%20Sept%2022-26"
-                      className={buttonVariants({ 
-                        size: "lg", 
-                        className: "w-full premium-button bg-accent hover:bg-accent/90" 
-                      })}
-                    >
-                      Contact to Register
-                    </Link>
-                  </div>
-                  
-                  <div className="text-center">
-                    <Link
-                      href="/training"
-                      className={buttonVariants({ 
-                        variant: "outline",
-                        className: "w-full border-accent text-accent hover:bg-accent/10" 
-                      })}
-                    >
-                      View All Training
-                    </Link>
-                  </div>
-                </div>
+            <CardContent className="py-12 text-center">
+              <p className="text-muted-foreground text-lg mb-6">
+                New training events and courses will be announced here soon. Check back for updates or contact us for custom training inquiries.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/training"
+                  className={buttonVariants({ 
+                    className: "premium-button bg-accent hover:bg-accent/90" 
+                  })}
+                >
+                  View Training Programs
+                </Link>
+                <Link
+                  href="/contact?source=training-inquiry"
+                  className={buttonVariants({ 
+                    variant: "outline",
+                    className: "border-accent text-accent hover:bg-accent/10" 
+                  })}
+                >
+                  Contact for Custom Training
+                </Link>
               </div>
             </CardContent>
           </Card>
@@ -398,7 +438,7 @@ export default function IndexPage() {
         
         {/* Mid-page CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-6 border border-accent/20">
+          <div className="glass-blue rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 text-accent">Start Training Your Team?</h3>
             <p className="text-muted-foreground mb-4">From complete beginners to advanced tactical operations</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

@@ -34,105 +34,117 @@ export default function TrainingPage() {
         </div>
       </section>
 
-      {/* Upcoming Course - Featured */}
+      {/* Upcoming Events - Placeholder */}
       <section className="container py-12 sm:py-16 border-t border-white/20">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4 text-accent">Upcoming Course</h2>
+            <h2 className="text-3xl font-bold mb-4 text-accent">Upcoming Events</h2>
             <p className="text-lg text-muted-foreground">
-              Register now for our next scheduled training session
+              New training events and courses will be announced here
             </p>
           </div>
           
           <Card className="relative overflow-hidden border-accent/30 bg-gradient-to-br from-accent/5 via-transparent to-primary/5">
-            {/* Limited Seats Badge */}
-            <div className="absolute top-4 right-4 z-10">
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-medium border border-red-500/30">
-                  Limited Seats
-                </span>
-                <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium border border-accent/30">
-                  Open Registration
-                </span>
+            <CardContent className="py-12 text-center">
+              <p className="text-muted-foreground text-lg mb-6">
+                Check back soon for upcoming training sessions. Contact us for custom training inquiries or to be notified when new courses are scheduled.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact?source=training-inquiry&subject=Custom%20Training%20Inquiry"
+                  className={buttonVariants({ 
+                    size: "lg",
+                    className: "premium-button bg-accent hover:bg-accent/90 text-lg" 
+                  })}
+                >
+                  Inquire About Training
+                </Link>
+                <Link
+                  href="#courses"
+                  className={buttonVariants({ 
+                    variant: "outline",
+                    size: "lg",
+                    className: "border-accent text-accent hover:bg-accent/10 text-lg" 
+                  })}
+                >
+                  View Course Catalog
+                </Link>
               </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Past Events */}
+      <section className="container py-12 sm:py-16 border-t border-white/20">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Past Events</h2>
+            <p className="text-lg text-muted-foreground">
+              Previous training sessions and courses we've conducted
+            </p>
+          </div>
+          
+          <Card className="relative overflow-hidden border-muted/30 opacity-90">
+            {/* Past Event Badge */}
+            <div className="absolute top-4 right-4 z-10">
+              <span className="bg-muted/30 text-muted-foreground px-3 py-1 rounded-full text-sm font-medium border border-muted/30">
+                Past Event
+              </span>
             </div>
 
             <CardHeader className="pb-4">
-              <CardTitle className="text-2xl font-bold text-accent mb-2">
+              <CardTitle className="text-2xl font-bold mb-2">
                 Advanced FPV and Fuzing Training
               </CardTitle>
               <CardDescription className="text-lg">
-                Intensive 5-day advanced training program for FPV operations and tactical applications
+                September 22-26, 2025 • Agony North Range, Colorado Springs
               </CardDescription>
             </CardHeader>
 
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Course Details */}
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-accent mb-3">Course Details:</h4>
+                  <h4 className="font-semibold mb-3">Course Details:</h4>
                   
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
+                      <div className="w-2 h-2 bg-muted-foreground rounded-full"></div>
                       <span className="text-sm">
-                        <span className="font-medium">Dates:</span> September 22-26, 2025
+                        <span className="font-medium">Duration:</span> 5 days intensive program
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
+                      <div className="w-2 h-2 bg-muted-foreground rounded-full"></div>
                       <span className="text-sm">
                         <span className="font-medium">Location:</span> Agony North Range, Colorado Springs
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-muted-foreground rounded-full"></div>
                       <span className="text-sm">
-                        <span className="font-medium">Available Seats:</span> 7 students
+                        <span className="font-medium">Format:</span> FPV operations & tactical applications
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Registration Info */}
+                {/* Event Info */}
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-accent mb-3">Registration Information:</h4>
+                  <h4 className="font-semibold mb-3">Event Summary:</h4>
                   
-                  <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span className="text-sm font-medium text-green-400">Open to Public</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                        <span className="text-sm">First-come, first-served basis</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                        <span className="text-sm">Only 7 seats available</span>
-                      </div>
-                    </div>
-                  </div>
-
+                  <p className="text-sm text-muted-foreground">
+                    Intensive 5-day advanced training program combining FPV operations with tactical applications. 
+                    Hands-on training at our Colorado Springs facility.
+                  </p>
+                  
                   <div className="pt-4">
-                    <Link
-                      href="/contact?source=course-registration&course=advanced-fpv-sept-2024&subject=Course%20Registration%20Inquiry%20-%20Advanced%20FPV%20Training%20Sept%2022-26"
-                      className={buttonVariants({ 
-                        size: "lg", 
-                        className: "w-full premium-button bg-accent hover:bg-accent/90 text-lg py-3 shadow-lg" 
-                      })}
-                    >
-                      Contact to Register
-                    </Link>
+                    <p className="text-sm text-muted-foreground italic">
+                      Interested in similar training? Contact us to discuss upcoming sessions or custom training programs.
+                    </p>
                   </div>
                 </div>
-              </div>
-
-              <div className="border-t border-accent/20 pt-4">
-                <p className="text-center text-sm text-muted-foreground">
-                  Contact our training team to secure your seat for this advanced course
-                </p>
               </div>
             </CardContent>
           </Card>
@@ -269,7 +281,7 @@ export default function TrainingPage() {
         
         {/* Mid-page CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-8 border border-accent/20">
+          <div className="glass-blue rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4 text-accent">Ready to Start Training?</h3>
             <p className="text-muted-foreground mb-6">Discuss your training needs and course selection with our experts</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -765,7 +777,7 @@ export default function TrainingPage() {
         
         {/* Mid-page CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-6 border border-primary/20">
+          <div className="glass-blue rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3">Custom Training Program?</h3>
             <p className="text-muted-foreground mb-4">We can tailor courses to your specific operational requirements</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
