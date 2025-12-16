@@ -81,7 +81,7 @@ export default function TrainingPage() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4">Past Events</h2>
             <p className="text-lg text-muted-foreground">
-              Previous training sessions and courses we've conducted
+              Previous training sessions and courses we&apos;ve conducted
             </p>
           </div>
           
